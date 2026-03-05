@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="CMT Risk Score — Case study by Livia R Chauar. A predictive risk scoring tool for clinical medication therapy management." />
+  <meta name="description" content="CMT Risk Score — Case study by Livia R Chauar. Driver Risk Score empowers Uber drivers with data-driven insights into their driving behavior." />
   <title>CMT Risk Score — Livia R Chauar</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;1,14..32,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Syne:wght@400;500;600;700;800&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;1,14..32,300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
@@ -46,22 +46,28 @@
 
         <div class="case-hero__meta reveal-fade">
           <a href="../projects.html" class="case-hero__back">
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M13 8H3M7 12l-4-4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <i data-lucide="arrow-left" width="16" height="16" aria-hidden="true"></i>
             All projects
           </a>
           <span class="tag">Healthcare</span>
+          <span class="tag">Mobile</span>
           <span class="tag">Data Visualization</span>
         </div>
 
         <p class="case-hero__intro reveal-up">
-          Translating complex clinical medication data into a clear, actionable risk score that helps pharmacists intervene before adverse events occur.
+          Driver Risk Score empowers Uber drivers with data-driven insights into their driving behavior, unlocking personalized safety quests and opportunities for continuous improvement.
         </p>
 
       </div>
 
+      <!-- ░░ HEADER IMAGE ░░ -->
       <div class="case-cover-wrap reveal-up" style="--delay: 0.1s">
-        <div class="case-cover project-card__img--1" aria-label="CMT Risk Score interface preview" role="img">
-          <div class="project-card__img-inner"></div>
+        <div class="case-cover case-cover--photo" aria-label="CMT Risk Score interface preview">
+          <img
+            src="../cmt-risk-score/images/Header.png"
+            alt="CMT Risk Score — mobile app interface showing driving insights screens"
+            class="case-cover__img"
+          />
         </div>
       </div>
 
@@ -74,7 +80,7 @@
             </div>
             <div class="case-hero__stat">
               <dt>Year</dt>
-              <dd>2023–2025</dd>
+              <dd>2024-2025</dd>
             </div>
             <div class="case-hero__stat">
               <dt>Company</dt>
@@ -82,7 +88,7 @@
             </div>
           </dl>
           <p class="case-hero__desc">
-            Translating complex clinical medication data into a clear, actionable risk score that helps pharmacists intervene before adverse events occur.
+            Building on the success of Driving Insights, Uber's Road Safety team introduced a dedicated product surface focused on driving behavior tracking, risk scoring, and clear, actionable feedback. Leveraging CMT's technology, this initiative unlocked new opportunities to support drivers in adopting safer driving behaviors.
           </p>
         </div>
       </div>
@@ -92,63 +98,160 @@
     <!-- ░░ CASE BODY ░░ -->
     <section class="case-body" aria-label="Case study content">
       <div class="container">
-        <div class="case-body__inner">
 
-          <div class="case-section reveal-up">
-            <h2>The Problem</h2>
-            <p>
-              Clinical pharmacists at large health systems were spending an average of 4.2 hours per shift manually reviewing patient medication lists to identify high-risk individuals. The process was inconsistent, time-intensive, and entirely dependent on individual pharmacist expertise — leading to missed interventions and patient safety events.
-            </p>
-            <p>
-              The product team had access to rich claims and EHR data that could power a predictive model. The challenge: how do you surface a complex algorithmic output in a way that a busy clinician trusts and acts on?
-            </p>
+        <!-- Key learnings -->
+        <div class="case-section case-section--centered reveal-up">
+          <h2>Key learnings from Driving Insights</h2>
+          <div class="case-grid-3">
+
+            <div class="case-grid-item">
+              <p class="case-grid-item__title">Transparency is key</p>
+              <p class="case-grid-item__body">To combat mistrust, drivers should be able to know not only when, but where the behavior took place.</p>
+            </div>
+
+            <div class="case-grid-item">
+              <p class="case-grid-item__title">More data and guidance</p>
+              <p class="case-grid-item__body">Users not only wanted more data like tailgating and harsh braking, but required actionable feedback on how to improve.</p>
+            </div>
+
+            <div class="case-grid-item">
+              <p class="case-grid-item__title">Privacy</p>
+              <p class="case-grid-item__body">Drivers wanted information over their data and how it's used.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ░░ HERO VIDEO ░░ -->
+        <div class="case-video-wrap reveal-up">
+          <video class="case-video" autoplay loop muted playsinline>
+            <source src="../cmt-risk-score/videos/Hero_video.webm" type="video/webm" />
+            <source src="../cmt-risk-score/videos/Hero_video.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+        <!-- Design principles -->
+        <div class="case-section case-section--centered reveal-up">
+          <h2>Design principles</h2>
+          <div class="case-grid-3">
+
+            <div class="case-grid-item">
+              <div class="case-grid-item__icon">
+                <i data-lucide="eye" width="32" height="32" aria-hidden="true"></i>
+              </div>
+              <p class="case-grid-item__title">Transparent</p>
+              <p class="case-grid-item__body">Clear explanations of the information and calculations can help <strong>inspire trust</strong> and push drivers to trust this tool and use it to change their behavior.</p>
+            </div>
+
+            <div class="case-grid-item">
+              <div class="case-grid-item__icon">
+                <i data-lucide="hand" width="32" height="32" aria-hidden="true"></i>
+              </div>
+              <p class="case-grid-item__title">Simple</p>
+              <p class="case-grid-item__body">Intuitive interface, following in-app patterns and simple concepts should <strong>help with cognitive load</strong> from the overall experience.</p>
+            </div>
+
+            <div class="case-grid-item">
+              <div class="case-grid-item__icon">
+                <i data-lucide="target" width="32" height="32" aria-hidden="true"></i>
+              </div>
+              <p class="case-grid-item__title">Actionable</p>
+              <p class="case-grid-item__body">Specific feedback can help earners to be more <strong>engaged and change their behaviors</strong>.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- ░░ ANNOTATED SHOWCASE ░░ -->
+        <div class="cmt-showcase reveal-up">
+
+          <!-- Left: Full_top.png + left-side annotations -->
+          <div class="cmt-showcase__left">
+            <div class="cmt-ann-sidebar cmt-ann-sidebar--left">
+
+              <div class="cmt-ann-entry" style="top: 25%">
+                <div class="cmt-ann-badge">
+                  1
+                  <div class="cmt-ann-popup">
+                    <strong class="cmt-ann-popup__title">Main score</strong>
+                    <p class="cmt-ann-popup__body">Score updates daily and provides feedback at a glance.</p>
+                  </div>
+                </div>
+                <span class="cmt-ann-label">Main score</span>
+              </div>
+
+              <div class="cmt-ann-entry" style="top: 68%">
+                <div class="cmt-ann-badge">
+                  2
+                  <div class="cmt-ann-popup">
+                    <strong class="cmt-ann-popup__title">Score overview</strong>
+                    <p class="cmt-ann-popup__body">Behaviors that affect your score, with a highlight on what to focus to improve.</p>
+                  </div>
+                </div>
+                <span class="cmt-ann-label">Score overview</span>
+              </div>
+
+            </div>
+            <img
+              src="../cmt-risk-score/images/Full_top.png"
+              class="cmt-phone-img"
+              alt="CMT Risk Score — main score view"
+            />
           </div>
 
-          <div class="case-callout reveal-fade">
-            <p>"How might we give pharmacists the right signal, at the right moment, with enough context to act confidently?"</p>
-          </div>
-
-          <div class="case-section reveal-up">
-            <h2>Discovery &amp; Research</h2>
-            <p>
-              I conducted 14 contextual inquiry sessions across 3 health systems, shadowing pharmacists during their shifts. Key findings:
+          <!-- Right: blurb heading + Full_bottom.png + right-side annotations -->
+          <div class="cmt-showcase__right">
+            <p class="cmt-showcase__blurb">
+              Building a metric that earners can use to measure how safely they're driving,
+              as well as a social proof for motivation to improve.
             </p>
-            <ul>
-              <li>Pharmacists trusted their instincts over algorithms they couldn't interrogate.</li>
-              <li>Numeric scores alone created anxiety — they needed to understand the "why."</li>
-              <li>Time pressure meant any new tool had to fit into an existing workflow in under 30 seconds per patient.</li>
-              <li>Color-coding for risk had accessibility implications that existing tools ignored.</li>
-            </ul>
-          </div>
+            <div class="cmt-showcase__phone-row">
+              <img
+                src="../cmt-risk-score/images/Full_bottom.png"
+                class="cmt-phone-img"
+                alt="CMT Risk Score — score details view"
+              />
+              <div class="cmt-ann-sidebar cmt-ann-sidebar--right">
 
-          <div class="case-image-block project-card__img--1 reveal-up">
-            <div class="project-card__img-inner"></div>
-          </div>
+                <div class="cmt-ann-entry" style="top: 15%">
+                  <div class="cmt-ann-badge">
+                    3
+                    <div class="cmt-ann-popup">
+                      <strong class="cmt-ann-popup__title">Humane messaging</strong>
+                      <p class="cmt-ann-popup__body">For education, motivation and actionable information.</p>
+                    </div>
+                  </div>
+                  <span class="cmt-ann-label">Humane messaging</span>
+                </div>
 
-          <div class="case-section reveal-up">
-            <h2>Design Decisions</h2>
-            <p>
-              The core design principle was <strong>explainability over confidence</strong>. The risk score is never shown as a single number. Instead, it surfaces as a tiered indicator (Low / Moderate / High) accompanied by the top 3 contributing factors, each with a plain-language rationale.
-            </p>
-            <p>
-              I designed a progressive disclosure model: the summary card lives in the existing patient list view, while a detailed breakdown opens in a side panel — never navigating away from the patient context. This kept the average interaction time under 22 seconds.
-            </p>
-            <p>
-              Accessibility drove color decisions. I used shape and iconography in addition to color for risk indicators, with a contrast ratio exceeding WCAG AA across all states, verified with real assistive technology testing.
-            </p>
-          </div>
+                <div class="cmt-ann-entry" style="top: 55%">
+                  <div class="cmt-ann-badge">
+                    4
+                    <div class="cmt-ann-popup">
+                      <strong class="cmt-ann-popup__title">Score history</strong>
+                      <p class="cmt-ann-popup__body">For motivation and improvement.</p>
+                    </div>
+                  </div>
+                  <span class="cmt-ann-label">Score history</span>
+                </div>
 
-          <div class="case-section reveal-up">
-            <h2>Outcome</h2>
-            <ul>
-              <li>Adopted by 94% of pharmacists within the first 6 weeks of launch.</li>
-              <li>Average risk-review time dropped from 4.2 hrs to 1.8 hrs per shift.</li>
-              <li>Clinician-reported confidence in intervention decisions increased by 37%.</li>
-              <li>Zero critical accessibility issues flagged in post-launch audit.</li>
-            </ul>
+                <div class="cmt-ann-entry" style="top: 80%">
+                  <div class="cmt-ann-badge">
+                    5
+                    <div class="cmt-ann-popup">
+                      <strong class="cmt-ann-popup__title">More resources</strong>
+                      <p class="cmt-ann-popup__body">To provide information on data privacy and how they may improve even further.</p>
+                    </div>
+                  </div>
+                  <span class="cmt-ann-label">More resources</span>
+                </div>
+
+              </div>
+            </div>
           </div>
 
         </div>
+
       </div>
     </section>
 
@@ -202,13 +305,14 @@
       <div class="footer__bottom">
         <span class="footer__copy">&copy; 2025 Livia R Chauar. All rights reserved.</span>
         <button class="footer__top-btn" id="backToTop" aria-label="Back to top">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 13V3M3 8l5-5 5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <i data-lucide="arrow-up" width="16" height="16" aria-hidden="true"></i>
           Back to top
         </button>
       </div>
     </div>
   </footer>
 
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <script src="../js/main.js"></script>
 </body>
 </html>

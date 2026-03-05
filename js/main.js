@@ -311,7 +311,14 @@ const qsa = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
   });
 })();
 
-/* ── 11. TAG FILTER (projects page) ─────────────────────── */
+/* ── 11. LUCIDE ICONS ────────────────────────────────────── */
+(function initLucide() {
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+  }
+})();
+
+/* ── 12. TAG FILTER (projects page) ─────────────────────── */
 (function initTagFilter() {
   const filterBtns = qsa('.filter-btn');
   const grid       = qs('.projects-grid');

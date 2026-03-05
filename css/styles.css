@@ -325,18 +325,17 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   place-items: center;
   width: 36px;
   height: 36px;
-  background: var(--clr-accent);
-  color: #fff;
+  background: var(--clr-gold);
+  color: #000;
   border-radius: var(--radius-sm);
   font-size: var(--fs-xs);
   font-weight: 700;
   letter-spacing: 0.05em;
-  transition: transform var(--trans-spring), background var(--trans-base);
+  transition: transform var(--trans-spring);
 }
 
 .nav__logo:hover .nav__logo-mark {
-  transform: rotate(-6deg) scale(1.08);
-  background: var(--clr-gold);
+  transform: rotate(-15deg) scale(1.12) skewX(-5deg);
 }
 
 .nav__logo-name { color: var(--clr-text); }
@@ -541,7 +540,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .hero__title {
   display: flex;
   flex-direction: column;
-  font-size: clamp(2.5rem, 12vw, 5rem);
+  font-size: clamp(3.25rem, 12vw, 5.75rem);
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: 0.01em;
@@ -550,14 +549,12 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   max-width: none;
 }
 
-/* Grid stacking: both layers share the same cell, DOM order = paint order */
 .hero__title-line {
-  display: grid;
+  display: block;
 }
 
 .hero__title-line__shade,
 .hero__title-line__fill {
-  grid-area: 1 / 1;   /* same cell — stacked */
   font-size: inherit;
   font-weight: 400;
   letter-spacing: inherit;
@@ -565,16 +562,15 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   line-height: inherit;
 }
 
-/* Shade: Bungee Shade in near-black — paints first (behind) */
+/* Shade layer hidden — replaced by plain Bungee fill */
 .hero__title-line__shade {
-  font-family: 'Bungee Shade', sans-serif;
-  color: #111;
+  display: none;
 }
 
-/* Fill: regular Bungee in mint — paints second (on top) */
+/* Single Bungee layer in brand blue */
 .hero__title-line__fill {
-  font-family: 'Bungee', sans-serif;
-  color: #A8FFD8;
+  font-family: 'Bungee Inline', sans-serif;
+  color: var(--clr-secondary);
 }
 
 .hero__title-line--accent { font-style: normal; }
@@ -1003,8 +999,8 @@ a.tag { text-decoration: none; }
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-.footer .nav__logo-mark { background: rgba(255,255,255,0.1); color: #fff; }
-.footer .nav__logo:hover .nav__logo-mark { background: var(--clr-gold); }
+.footer .nav__logo-mark { background: rgba(255,255,255,0.15); color: #fff; }
+.footer .nav__logo:hover .nav__logo-mark { background: rgba(255,255,255,0.15); }
 .footer .nav__logo-name { color: rgba(255,255,255,0.9); }
 
 .footer__tagline {
@@ -1105,13 +1101,14 @@ a.tag { text-decoration: none; }
 .page-hero__label { margin-bottom: var(--space-6); }
 
 .page-hero__title {
-  font-family: 'Bungee Shade', var(--ff-serif);
+  font-family: 'Bungee Inline', var(--ff-serif);
   font-size: clamp(var(--fs-xl), 4vw, var(--fs-3xl));
   font-weight: 400;
   line-height: 1.25;
   letter-spacing: 0.01em;
   max-width: none;
   margin-bottom: var(--space-8);
+  color: var(--clr-secondary);
 }
 
 .page-hero__title em {
@@ -1119,12 +1116,13 @@ a.tag { text-decoration: none; }
   color: var(--clr-secondary);
 }
 
-/* About section on home page — Bungee Shade heading */
+/* About section on home page — Bungee Inline heading in brand blue */
 .about-preview .section-title {
-  font-family: 'Bungee Shade', var(--ff-serif);
+  font-family: 'Bungee Inline', var(--ff-serif);
   font-weight: 400;
   line-height: 1.25;
   letter-spacing: 0.01em;
+  color: var(--clr-secondary);
 }
 
 .about-preview .section-title em {
@@ -1522,7 +1520,290 @@ a.tag { text-decoration: none; }
   .projects-grid { gap: var(--space-4); }
 }
 
-/* ── 15. REDUCED MOTION ───────────────────────────────────── */
+/* ── 15. CASE GRID LAYOUT ────────────────────────────────── */
+
+/* Centred section heading */
+.case-section--centered h2 {
+  text-align: center;
+  margin-bottom: var(--space-10);
+}
+
+/* 3-column grid for learnings / principles */
+.case-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-10) var(--space-8);
+  margin-bottom: var(--space-4);
+}
+
+.case-grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.case-grid-item__icon {
+  color: var(--clr-text-3);
+  margin-bottom: var(--space-4);
+}
+
+.case-grid-item__title {
+  font-size: var(--fs-base);
+  font-weight: 600;
+  color: var(--clr-text);
+  margin-bottom: var(--space-3);
+}
+
+.case-grid-item__body {
+  font-size: var(--fs-sm);
+  color: var(--clr-text-2);
+  line-height: 1.75;
+  max-width: 28ch;
+}
+
+@media (max-width: 768px) {
+  .case-grid-3 {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+  .case-grid-item__body { max-width: none; }
+}
+
+/* ── 16. CMT ANNOTATED SHOWCASE ──────────────────────────── */
+
+/* Two-column master grid */
+.cmt-showcase {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(var(--space-8), 5vw, var(--space-16));
+  margin-block: var(--space-12);
+  align-items: start;
+}
+
+/* ── Left panel: sidebar-left + phone ── */
+.cmt-showcase__left {
+  display: flex;
+  align-items: stretch;
+  gap: var(--space-8);
+}
+
+/* ── Right panel: blurb + phone-row ── */
+.cmt-showcase__right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.cmt-showcase__blurb {
+  font-family: 'Bungee Inline', sans-serif;
+  font-size: clamp(1.1rem, 2.2vw, 1.75rem);
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--clr-text);
+}
+
+.cmt-showcase__phone-row {
+  display: flex;
+  align-items: stretch;
+  gap: var(--space-8);
+}
+
+/* ── Phone images — plain PNGs, no decoration ── */
+.cmt-phone-img {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── Annotation sidebar (shared) ── */
+.cmt-ann-sidebar {
+  flex-shrink: 0;
+  width: 150px;
+  position: relative;
+  align-self: stretch;
+}
+
+/* Green vertical bar */
+.cmt-ann-sidebar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--clr-gold);
+  border-radius: 2px;
+}
+
+.cmt-ann-sidebar--left::before { right: 0; }
+.cmt-ann-sidebar--right::before { left: 0; }
+
+/* Individual annotation entry */
+.cmt-ann-entry {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.cmt-ann-sidebar--left .cmt-ann-entry {
+  left: 8px; /* badge on outer-left, label reads toward the bar */
+}
+
+.cmt-ann-sidebar--right .cmt-ann-entry {
+  left: 8px;
+}
+
+/* Numbered badge circle */
+.cmt-ann-badge {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--clr-gold);
+  color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: 0 0 0 2px #fff;
+  transition: transform var(--trans-fast), box-shadow var(--trans-fast);
+}
+
+/* Badge pulse on entry hover */
+.cmt-ann-entry:hover .cmt-ann-badge {
+  transform: scale(1.2);
+  box-shadow: 0 0 0 4px var(--clr-gold-light), 0 0 0 2px #fff;
+}
+
+/* Label text */
+.cmt-ann-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--clr-text-2);
+  line-height: 1.3;
+  white-space: nowrap;
+  transition: color var(--trans-fast);
+}
+
+.cmt-ann-entry:hover .cmt-ann-label {
+  color: var(--clr-gold);
+}
+
+/* ── Annotation popup tooltip ── */
+.cmt-ann-popup {
+  position: absolute;
+  bottom: calc(100% + 14px);
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+  width: 180px;
+  background: var(--clr-surface);
+  border: 1px solid rgba(0,0,0,0.10);
+  border-radius: var(--radius-md);
+  padding: var(--space-3) var(--space-4);
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  z-index: 40;
+  white-space: normal;
+  text-align: left;
+}
+
+/* Small arrow pointing down toward the badge */
+.cmt-ann-popup::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 6px solid transparent;
+  border-top-color: var(--clr-surface);
+  filter: drop-shadow(0 1px 0 rgba(0,0,0,0.08));
+}
+
+.cmt-ann-popup__title {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--clr-gold);
+  margin-bottom: var(--space-1);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.cmt-ann-popup__body {
+  margin: 0;
+  font-size: 12px;
+  color: var(--clr-text-2);
+  line-height: 1.6;
+}
+
+.cmt-ann-entry:hover .cmt-ann-popup {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Responsive — stack vertically on small screens */
+@media (max-width: 768px) {
+  .cmt-showcase {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+  .cmt-ann-sidebar { display: none; }
+  .cmt-showcase__left,
+  .cmt-showcase__phone-row { gap: var(--space-4); }
+}
+
+/* ── 17. CASE COVER IMAGE & VIDEO ────────────────────────── */
+
+/* Override gradient background when a real photo is used */
+.case-cover--photo {
+  background: #1a1a1a;
+}
+
+/* Image fills the 16/7 container, cropped via cover — adapts
+   naturally to any viewport width because .case-cover uses
+   aspect-ratio: 16/7 and the img is width:100% / height:100% */
+.case-cover__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Video block — preserves the video's native aspect ratio
+   and scales proportionally as the viewport changes */
+.case-video-wrap {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-block: var(--space-10);
+  box-shadow: var(--shadow-lg);
+}
+
+.case-video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ── 16. LUCIDE ICONS ─────────────────────────────────────── */
+
+/* User placeholder icons inherit muted colour from their parent */
+.about-preview__photo-inner svg,
+.about-page-photo svg {
+  color: rgba(0, 0, 0, 0.2);
+}
+
+/* ── 17. REDUCED MOTION ───────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -1534,4 +1815,5 @@ a.tag { text-decoration: none; }
     opacity: 1;
     transform: none;
   }
+  .case-video { animation: none; }
 }
