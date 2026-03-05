@@ -9,6 +9,15 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Syne:wght@400;500;600;700;800&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;1,14..32,300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+    /* ── CMT page: use Inter for all body headings, keep hero intro in Syne ── */
+    .case-body .case-section h2,
+    .case-body .case-split__text h2 {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+    }
+  </style>
 </head>
 <body>
 
@@ -63,11 +72,14 @@
       <!-- ░░ HEADER IMAGE ░░ -->
       <div class="case-cover-wrap reveal-up" style="--delay: 0.1s">
         <div class="case-cover case-cover--photo" aria-label="CMT Risk Score interface preview">
-          <img
-            src="../cmt-risk-score/images/Header.png"
-            alt="CMT Risk Score — mobile app interface showing driving insights screens"
-            class="case-cover__img"
-          />
+          <picture>
+            <source media="(max-width: 768px)" srcset="../cmt-risk-score/images/mHeader.png" />
+            <img
+              src="../cmt-risk-score/images/Header.png"
+              alt="CMT Risk Score — mobile app interface showing driving insights screens"
+              class="case-cover__img"
+            />
+          </picture>
         </div>
       </div>
 
@@ -170,7 +182,6 @@
         <!-- ░░ INTRODUCING THE DRIVING SCORE ░░ -->
         <div class="case-split reveal-up">
           <div class="case-split__text">
-            <span class="case-section__label">Introducing the driving score</span>
             <h2>Introducing the driving score</h2>
             <p>By introducing a score, we aimed to provide a place for drivers to quickly identify and understand their own driving behavior. Incorporating it into a social proof framework competition, motivating drivers to strive for higher safety scores.</p>
           </div>
@@ -182,10 +193,10 @@
 
         <!-- ░░ OPTIMIZING HIERARCHY ░░ -->
         <div class="case-section reveal-up">
-          <span class="case-section__label">Optimizing hierarchy</span>
+          <h2>Optimizing hierarchy</h2>
           <div class="case-hierarchy-intro">
-            <p>The page hierarchy was carefully designed to draw to the app's score area while delivering the right information at each step of the user journey.</p>
-            <p>The app's main score would grab users' attention, while secondary information would sit above the fold of all necessary information for new scored trips.</p>
+            <p>The page hierarchy was carefully designed to maximize the use of screen real estate while delivering the right information at each step of the user journey.</p>
+            <p>The eye-catching main score would grab users' attention, while all necessary information would sit above the fold of most devices, including the entry point to view scored trips.</p>
           </div>
         </div>
 
@@ -278,35 +289,60 @@
         <!-- ░░ TRANSPARENCY ░░ -->
         <div class="case-section reveal-up">
           <p class="case-statement">Transparency was non-negotiable, so CMT Risk Score included <strong>detailed information of driving behavior</strong>.</p>
-          <div class="case-phones">
-            <img src="../cmt-risk-score/images/TripView_1.png" class="case-phones__img" alt="Trip view — driving behavior detail" />
-            <img src="../cmt-risk-score/images/TripView_2.png" class="case-phones__img" alt="Trip view — map and score" />
-            <img src="../cmt-risk-score/images/TripItem_Detail.png" class="case-phones__img" alt="Trip item detail" />
-          </div>
+          <img src="../cmt-risk-score/images/FLOW.png" class="case-wide-img" alt="CMT Risk Score — user flow showing driving behavior detail screens" />
         </div>
 
         <!-- ░░ TRIP DETAIL COMPONENT ░░ -->
         <div class="case-split reveal-up">
-          <div class="case-split__text">
-            <span class="case-section__label">Trip detail component</span>
-            <h2>Trip detail component</h2>
-            <p>Providing all the necessary information to users so they can review the time and location of the behaviors detected.</p>
-            <ul>
-              <li>From your recent trips</li>
-              <li>Location of each detected behavior</li>
-              <li>Behavior impact on score</li>
-              <li>Tips to address specific behaviors</li>
-            </ul>
-          </div>
           <div class="case-split__media">
-            <img src="../cmt-risk-score/images/mHeader.png" class="case-phones__img" alt="Trip detail — header" />
             <img src="../cmt-risk-score/images/TripItem_Detail.png" class="case-phones__img" alt="Trip item detail component" />
+          </div>
+          <div class="case-split__text">
+            <h2>Trip detail component</h2>
+            <p>Providing all the necessary information to users so they may evaluate the time and location of the behaviors detected.</p>
+            <ul class="case-annot-list">
+              <li class="case-annot-list__item">
+                <div class="case-annot-list__num">1</div>
+                <div class="case-annot-list__content">
+                  <strong>Trip metadata</strong>
+                  <p>All relevant trip information is displayed.</p>
+                </div>
+              </li>
+              <li class="case-annot-list__item">
+                <div class="case-annot-list__num">2</div>
+                <div class="case-annot-list__content">
+                  <strong>Behaviors detected</strong>
+                  <p>Behaviors are shown as tags that may be filtered by the user.</p>
+                </div>
+              </li>
+              <li class="case-annot-list__item">
+                <div class="case-annot-list__num">3</div>
+                <div class="case-annot-list__content">
+                  <strong>Map</strong>
+                  <p>The map displays behaviors as icons for further inspection.</p>
+                </div>
+              </li>
+              <li class="case-annot-list__item">
+                <div class="case-annot-list__num">4</div>
+                <div class="case-annot-list__content">
+                  <strong>Pick up and drop off</strong>
+                  <p>Beginning and end of trip are signaled.</p>
+                </div>
+              </li>
+              <li class="case-annot-list__item">
+                <div class="case-annot-list__num">5</div>
+                <div class="case-annot-list__content">
+                  <strong>Report an issue</strong>
+                  <p>If the user believes there is a problem with a detected behavior, they may reach out for questions.</p>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
 
         <!-- ░░ UI REFINEMENT ░░ -->
         <div class="case-section reveal-up">
-          <span class="case-section__label">UI refinement</span>
+          <h2>UI refinement</h2>
           <p style="font-size: var(--fs-md); color: var(--clr-text-2); line-height: 1.75; margin-bottom: var(--space-8); max-width: 66ch;">Each chart iteration was carefully evaluated to ensure drivers could read and compare their scores clearly, aligning with the overall goal of fostering long-term behavior change.</p>
           <div class="case-charts">
             <img src="../cmt-risk-score/images/Chart_1.png" class="case-charts__img" alt="Score chart iteration 1" />
