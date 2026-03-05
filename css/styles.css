@@ -1558,14 +1558,14 @@ a.tag { text-decoration: none; }
 
 .case-grid-item__icon {
   color: var(--clr-text-3);
-  margin-bottom: var(--space-2);
+  margin-bottom: 8px;
 }
 
 .case-grid-item__title {
   font-size: var(--fs-base);
   font-weight: 600;
   color: var(--clr-text);
-  margin-bottom: var(--space-4);
+  margin-bottom: 16px;
 }
 
 .case-grid-item__body {
@@ -1904,6 +1904,7 @@ a.tag { text-decoration: none; }
 }
 
 .case-statement strong {
+  color: var(--clr-text);
   font-weight: 700;
 }
 
