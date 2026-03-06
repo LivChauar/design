@@ -3,12 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Insurance Hub — Case study by Livia R Chauar. A digital insurance card experience for frictionless mobile verification." />
+  <meta name="description" content="Insurance Hub — Case study by Livia R Chauar. A redesigned Insurance Hub for Uber Drivers, built around their mental models and real insurance needs." />
   <title>Insurance Hub — Livia R Chauar</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;1,14..32,300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+    .case-body .case-section h2,
+    .case-body .case-split__text h2 {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+    }
+  </style>
 </head>
 <body>
 
@@ -49,13 +57,13 @@
             <i data-lucide="arrow-left" width="16" height="16" aria-hidden="true"></i>
             All projects
           </a>
-          <span class="tag">Fintech</span>
-          <span class="tag">Mobile</span>
-          <span class="tag">Accessibility</span>
+          <span class="tag">Uber</span>
+          <span class="tag">Driver Platform</span>
+          <span class="tag">Insurance</span>
         </div>
 
         <p class="case-hero__intro reveal-up">
-          Replacing a physical insurance card with a mobile-first, accessible digital experience that works when it needs to — at the roadside, in a clinic, or in a low-signal zone.
+          Driving insights released in 2021 was a success, and so we went for more. What if we showed drivers all dangerous behaviors and provided them with a score?
         </p>
 
       </div>
@@ -78,7 +86,7 @@
             </div>
             <div class="case-hero__stat">
               <dt>Year</dt>
-              <dd>2022–2023</dd>
+              <dd>2023–2024</dd>
             </div>
             <div class="case-hero__stat">
               <dt>Company</dt>
@@ -86,7 +94,7 @@
             </div>
           </dl>
           <p class="case-hero__desc">
-            Replacing a physical insurance card with a mobile-first, accessible digital experience that works when it needs to — at the roadside, in a clinic, or in a low-signal zone.
+            A redesigned Insurance Hub for Uber Drivers, built around their mental models and real insurance needs — surfacing the right information at the right moment.
           </p>
         </div>
       </div>
@@ -98,63 +106,96 @@
       <div class="container">
         <div class="case-body__inner">
 
+          <!-- Problem / Solution / Impact -->
           <div class="case-section reveal-up">
-            <h2>The Opportunity</h2>
-            <p>
-              Insurance ID cards are mandated in most US states for vehicle registration and insurance verification. Despite widespread smartphone adoption, millions of people still carry physical cards — often expired, illegible, or simply not on them when needed. State laws are increasingly permitting digital versions, but existing implementations were digital replicas of physical cards: hard to read, inaccessible, and unavailable offline.
-            </p>
-            <p>
-              The business goal was to migrate 70% of policyholders to digital cards within 12 months. The design challenge was to make the digital experience unambiguously better than the physical one.
-            </p>
+            <div class="case-grid-3">
+
+              <div class="case-grid-item">
+                <div class="case-grid-item__icon">🌀</div>
+                <p class="case-grid-item__title">Problem</p>
+                <p class="case-grid-item__body">Albeit fundamental to Uber, the Insurance Hub was over five years old and failed to address both Driver's and Uber's needs</p>
+              </div>
+
+              <div class="case-grid-item">
+                <div class="case-grid-item__icon">✅</div>
+                <p class="case-grid-item__title">Solution</p>
+                <p class="case-grid-item__body">A new Insurance Hub whose IA and structure are optimized to match the Driver's mental models and provide information while surfacing product offers in the future.</p>
+              </div>
+
+              <div class="case-grid-item">
+                <div class="case-grid-item__icon">📊</div>
+                <p class="case-grid-item__title">Impact</p>
+                <p class="case-grid-item__body">Currently under development</p>
+              </div>
+
+            </div>
           </div>
+
+          <!-- My Role -->
+          <div class="case-section reveal-up">
+            <h2>My Role</h2>
+            <p>I was the Lead Product Designer for this project, responsible for leading the vision, managing stakeholders, syncing and aligning across the design org and engineering team.</p>
+            <p>Led the co-creation workshop with internal and external teams during the discovery phase, and partnered up with the UXR for the interviews, shadowing, roundtables, and user testing.</p>
+            <p>I also mentored a Design Intern and a Design Apprentice during this project.</p>
+          </div>
+
+          <!-- Problem space -->
+          <div class="case-section reveal-up">
+            <h2>Problem space</h2>
+            <p>Uber is heavily impacted by Insurance, and insurance cost savings are one of the company's main focus areas. Yet, the Insurance Hub, the main surface for Driver insurance information, was over six years old.</p>
+            <p>The Insurance team went through a month-long research with Drivers, Uber's internal Insurance team, and our third-party partners, performing shadowing, interviews, co-creation workshops, mapping the end-to-end experience, and identifying areas of improvement.</p>
+            <p>For the Insurance Hub, we saw the opportunity to leverage an existing surface and show evergreen insurance information.</p>
+          </div>
+
+          <!-- Surface goals -->
+          <div class="case-section reveal-up">
+            <h2>Surface goals</h2>
+            <ul>
+              <li><strong>Centralize</strong> entry points for all insurance-related products and information</li>
+              <li><strong>Emphasize</strong> what primary insurances are, and when to use each one of them</li>
+              <li><strong>Highlight</strong> optional products available for purchase</li>
+            </ul>
+          </div>
+
+          <!-- Exploring the Hub -->
+          <div class="case-section reveal-up">
+            <h2>Exploring the Hub</h2>
+            <p>We explored a variety of hierarchies and visual treatments for the information on Insurance Hub. Keeping with Baseweb's capabilities, we tested the limits of what was feasible on this design system. We also proposed other IAs for the page and aimed at Uber's far future of insurance.</p>
+          </div>
+
+          <img src="../insurance-card/images/Explorations.png" alt="Hub exploration concepts" class="case-wide-img reveal-up" />
 
           <div class="case-callout reveal-fade">
-            <p>"At 2 AM on the side of a highway in the rain, your UI has maybe 4 seconds to work. There is no room for confusion."</p>
+            <p>Due to the amount of products available, we decided not to expand the page to include a dedicated, fully-fledged marketplace. Additionally, education was dropped as we couldn't create new learning materials.</p>
           </div>
+
+          <!-- The Insurance Card -->
+          <div class="case-section reveal-up">
+            <h2>The Insurance Card</h2>
+            <p>The insurance card is ingrained into the user's mental model. Frequently cited as being used right off the bat during a crash, we designed a card solution for diverse insurance-related situations.</p>
+          </div>
+
+          <img src="../insurance-card/images/Cards.png" alt="Insurance card design explorations" class="case-wide-img reveal-up" />
 
           <div class="case-section reveal-up">
-            <h2>Research</h2>
-            <p>
-              We surveyed 1,200 policyholders about their physical card habits and ran usability tests across 3 competitor apps with 16 participants. We also consulted with law enforcement on what they actually need to see during a roadside stop.
-            </p>
-            <ul>
-              <li>68% of users had trouble finding their physical card at the point of need.</li>
-              <li>Competitor apps buried the card 3–5 taps deep — too slow in a high-stress moment.</li>
-              <li>Officers needed 4 specific fields: policy number, insurer, effective dates, and vehicle VIN.</li>
-              <li>23% of test users had accessibility needs that existing apps completely ignored.</li>
-              <li>Offline availability was a non-negotiable — emergencies don't wait for signal.</li>
-            </ul>
+            <p>The final insurance card available on the Insurance Hub emphasizes at which moment of the trip experience insurance was active, the insurance number, and the carrier. Its function is to display information at the hub.</p>
           </div>
 
-          <div class="case-image-block project-card__img--4 reveal-up">
-            <div class="project-card__img-inner"></div>
+          <img src="../insurance-card/images/Insurance_Card.png" alt="Final insurance card design" class="case-wide-img reveal-up" />
+
+          <div class="case-callout reveal-fade">
+            <p>The insurance card would be available at the Insurance Hub by default. However, it was also to be available to drivers at other points of their experience.</p>
           </div>
 
+          <img src="../insurance-card/images/OtherMoments.png" alt="Insurance card available at other moments in the driver experience" class="case-wide-img reveal-up" />
+
+          <!-- The final hub -->
           <div class="case-section reveal-up">
-            <h2>Design Solution</h2>
-            <p>
-              The card is accessible from the app home screen in one tap — no authentication required for the card view (we worked with legal to validate this). The card is stored locally on device for full offline access.
-            </p>
-            <p>
-              The visual design uses a large-type layout optimized for readability at arm's length in poor lighting. We ran contrast tests in direct sunlight and under harsh white light. The 4 key fields are displayed at 24px minimum with a secondary grid for additional policy details.
-            </p>
-            <p>
-              For users managing multiple vehicles, a card-flip interaction reveals additional vehicles without navigating away. The entire flow was designed with VoiceOver and TalkBack in mind from day one — not as an afterthought. Dynamic Type support means it adapts to any user's system font size preference.
-            </p>
-            <p>
-              A "Share Card" feature lets policyholders send a secure, time-limited PDF to a third party — useful for loan paperwork, car rentals, and other verification scenarios.
-            </p>
+            <h2>The final hub</h2>
+            <p>Finally, we achieved a hierarchy that seemed to implement all the feedback gathered from users during testing sessions.</p>
           </div>
 
-          <div class="case-section reveal-up">
-            <h2>Outcome</h2>
-            <ul>
-              <li>74% of active app users adopted the digital card within 60 days of launch — exceeding the 12-month goal.</li>
-              <li>App store rating increased from 3.1 to 4.6 stars, with digital card cited in 38% of positive reviews.</li>
-              <li>Accessibility audit score improved from 61% to 98% WCAG AA compliance.</li>
-              <li>Support contacts related to card retrieval dropped 81%.</li>
-            </ul>
-          </div>
+          <img src="../insurance-card/images/Section+1.jpg" alt="Final Insurance Hub design" class="case-wide-img reveal-up" />
 
         </div>
       </div>
@@ -166,7 +207,6 @@
         <p class="next-case__label">Back to start</p>
         <a href="cmt-risk-score.html" class="next-case__link">
           <h2 class="next-case__title">CMT Risk Score →</h2>
-          <p style="color: var(--clr-text-2); font-size: var(--fs-md); margin-top: var(--space-2);">Healthcare · Data Visualization · SaaS</p>
         </a>
       </div>
     </section>
