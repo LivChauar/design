@@ -3,12 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Driving Insights — Case study by Livia R Chauar. A telematics dashboard for fleet managers and individual drivers." />
+  <meta name="description" content="Driving Insights — Case study by Livia R Chauar. Helping Uber Drivers understand their speeding behavior with contextual, actionable data." />
   <title>Driving Insights — Livia R Chauar</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;1,14..32,300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+    .case-body .case-section h2,
+    .case-body .case-split__text h2 {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+    }
+  </style>
 </head>
 <body>
 
@@ -49,12 +57,13 @@
             <i data-lucide="arrow-left" width="16" height="16" aria-hidden="true"></i>
             All projects
           </a>
-          <span class="tag">Automotive</span>
-          <span class="tag">Telematics</span>
+          <span class="tag">Uber</span>
+          <span class="tag">Driver Platform</span>
+          <span class="tag">Safety</span>
         </div>
 
         <p class="case-hero__intro reveal-up">
-          Making telematics data human — a dual-audience dashboard that helps fleet managers optimize safety and empowers drivers to understand and improve their behavior.
+          How might we help Uber Drivers understand how often they are speeding and how they can improve
         </p>
 
       </div>
@@ -73,11 +82,11 @@
           <dl class="case-hero__stats">
             <div class="case-hero__stat">
               <dt>Role</dt>
-              <dd>Senior Product Designer</dd>
+              <dd>Product Designer</dd>
             </div>
             <div class="case-hero__stat">
               <dt>Year</dt>
-              <dd>2021–2022</dd>
+              <dd>2020–2021</dd>
             </div>
             <div class="case-hero__stat">
               <dt>Company</dt>
@@ -85,7 +94,7 @@
             </div>
           </dl>
           <p class="case-hero__desc">
-            Making telematics data human — a dual-audience dashboard that helps fleet managers optimize safety and empowers drivers to understand and improve their behavior.
+            A spike in dangerous driving following COVID restrictions drove Uber to give drivers visibility into their own behavior — starting with speeding, with contextual data they could actually act on.
           </p>
         </div>
       </div>
@@ -95,63 +104,122 @@
     <!-- ░░ CASE BODY ░░ -->
     <section class="case-body" aria-label="Case study content">
       <div class="container">
-        <div class="case-body__inner">
 
-          <div class="case-section reveal-up">
-            <h2>The Challenge</h2>
-            <p>
-              Telematics platforms are notoriously numbers-heavy. Insurance companies and fleet operators have access to thousands of driving data points per trip — but most platforms present this as raw tables that neither fleet managers nor drivers know how to act on.
-            </p>
-            <p>
-              We had two distinct users with different needs: fleet managers wanting aggregate trends and exception alerts, and individual drivers wanting personalized feedback without feeling surveilled. One product had to serve both without alienating either.
-            </p>
+        <!-- Problem / Solution / Impact -->
+        <div class="case-section case-section--centered reveal-up">
+          <div class="case-grid-3">
+
+            <div class="case-grid-item">
+              <div class="case-grid-item__icon">
+                <i data-lucide="alert-triangle" width="32" height="32" aria-hidden="true"></i>
+              </div>
+              <p class="case-grid-item__title">Problem</p>
+              <p class="case-grid-item__body">A spike in dangerous driving behavior after COVID restrictions started to get lifted led to more crashes and more rider reports</p>
+            </div>
+
+            <div class="case-grid-item">
+              <div class="case-grid-item__icon">
+                <i data-lucide="lightbulb" width="32" height="32" aria-hidden="true"></i>
+              </div>
+              <p class="case-grid-item__title">Solution</p>
+              <p class="case-grid-item__body">Provide drivers with detailed data and contextual information about when and where they were speeding.</p>
+            </div>
+
+            <div class="case-grid-item">
+              <div class="case-grid-item__icon">
+                <i data-lucide="trending-down" width="32" height="32" aria-hidden="true"></i>
+              </div>
+              <p class="case-grid-item__title">Impact</p>
+              <p class="case-grid-item__body">-7% of speeding on the user cohort testing the experience</p>
+            </div>
+
           </div>
-
-          <div class="case-callout reveal-fade">
-            <p>"Data without narrative is just noise. Our job was to turn driving behavior data into a story drivers would want to improve."</p>
-          </div>
-
-          <div class="case-section reveal-up">
-            <h2>Research</h2>
-            <p>
-              I ran diary studies with 12 drivers over two weeks and conducted stakeholder interviews with 6 fleet managers. Key tension points:
-            </p>
-            <ul>
-              <li>Drivers felt monitored rather than supported — existing tools created anxiety, not motivation.</li>
-              <li>Fleet managers spent most of their time in Excel because the dashboard couldn't answer their actual questions.</li>
-              <li>Both groups distrusted scores they couldn't understand or challenge.</li>
-              <li>The best driving programs used coaching language, not grading language.</li>
-            </ul>
-          </div>
-
-          <div class="case-image-block project-card__img--3 reveal-up">
-            <div class="project-card__img-inner"></div>
-          </div>
-
-          <div class="case-section reveal-up">
-            <h2>Design Solution</h2>
-            <p>
-              I designed a dual-mode dashboard with a shared data layer. Fleet managers access a macro view: fleet health score, top exception categories, driver comparison, and trend lines with configurable date ranges. Everything exportable.
-            </p>
-            <p>
-              The driver-facing mobile experience uses a coaching metaphor. Instead of a single score, drivers see a weekly "trip report" with three highlights — one strength to reinforce, one area to improve, and one comparison to their own personal best. No peer comparison. No shame mechanics.
-            </p>
-            <p>
-              Data visualization used a combination of small multiples and annotation layers to show context. Speed violations, for example, are shown on a route map with time-of-day context — giving drivers a way to connect behavior to real situations they remember.
-            </p>
-          </div>
-
-          <div class="case-section reveal-up">
-            <h2>Outcome</h2>
-            <ul>
-              <li>Driver app weekly active usage grew from 12% to 61% within 3 months.</li>
-              <li>Average driver safety score improved 18% across the beta fleet.</li>
-              <li>Fleet manager task completion rate increased from 44% to 89%.</li>
-              <li>Net Promoter Score for the driver app went from +11 to +52 post-redesign.</li>
-            </ul>
-          </div>
-
         </div>
+
+        <!-- Pull quote -->
+        <div class="case-pullquote reveal-up">
+          <p>This change of behavior was risky for both drivers, riders and other passers-by. <strong>Riders started to report driving behavior more often</strong>, which in turn led to more <strong>deactivations due to dangerous driving</strong>.</p>
+        </div>
+
+        <!-- Problem space -->
+        <div class="case-section reveal-up">
+          <h2>Problem space</h2>
+          <p>As Covid-19 restrictions started to be lifted in the US, drivers found themselves in a far more intense driving environment. Other drivers on the road were apparently driving worse than before, and Uber drivers also started to speed up, hard braking and harsh turning more than before.</p>
+          <p>All of that pushed Uber to aid drivers in understanding what is happening, give them visibility of their driving behavior, and properly take action.</p>
+        </div>
+
+        <!-- Design principles -->
+        <div class="case-section case-section--centered reveal-up">
+          <h2>Design principles</h2>
+          <div class="case-grid-3">
+
+            <div class="case-grid-item">
+              <div class="case-grid-item__icon">
+                <i data-lucide="hash" width="32" height="32" aria-hidden="true"></i>
+              </div>
+              <p class="case-grid-item__title">Quantifiable</p>
+              <p class="case-grid-item__body">The surface should clearly show the behaviors and <strong>how many of them happened</strong> in a set period of time.</p>
+            </div>
+
+            <div class="case-grid-item">
+              <div class="case-grid-item__icon">
+                <i data-lucide="map-pin" width="32" height="32" aria-hidden="true"></i>
+              </div>
+              <p class="case-grid-item__title">Contextual</p>
+              <p class="case-grid-item__body">Show where and when the behavior happened, with <strong>visual support</strong>.</p>
+            </div>
+
+            <div class="case-grid-item">
+              <div class="case-grid-item__icon">
+                <i data-lucide="target" width="32" height="32" aria-hidden="true"></i>
+              </div>
+              <p class="case-grid-item__title">Actionable</p>
+              <p class="case-grid-item__body">Drivers want to be able to <strong>report behaviors they disagree with</strong>.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Solution studies -->
+        <div class="case-section reveal-up">
+          <h2>Solution studies</h2>
+          <p>Considering the design and product requirements and research findings, the team opted for a surface dedicated to aggregate data, from where users could go to the detailed map information of their speeding instances.</p>
+        </div>
+
+        <img src="../driving-insights/images/Dashboards.png" class="case-wide-img reveal-up" alt="Solution studies — dashboard explorations" />
+
+        <div class="case-callout reveal-fade">
+          <p>Due to the nature of this experience, we decided to not work straight away with all behaviors. Instead, speeding would be used as a starting point for the surface, from where we could learn and iterate the solution.</p>
+        </div>
+
+        <!-- Dashboard finishing touches -->
+        <div class="case-section reveal-up">
+          <h2>Dashboard finishing touches</h2>
+          <p>Starting with a single behavior, speeding, we designed a solution that could show the past seven days of behaviors tracked by telematics. For the chart view, we ultimately decided to use the same graph seen in earnings dashboard for the sake of consistency.</p>
+        </div>
+
+        <img src="../driving-insights/images/DrivingHome.png" class="case-wide-img reveal-up" alt="Dashboard finishing touches" />
+
+        <!-- Trip segment solution -->
+        <div class="case-section reveal-up">
+          <h2>Trip segment solution</h2>
+          <p>Starting with a single behavior, speeding, we designed a solution that could show the past seven days of behaviors tracked by telematics. For the chart view, we ultimately decided to use the same graph seen in earnings dashboard for the sake of consistency.</p>
+        </div>
+
+        <img src="../driving-insights/images/TripSegments.png" class="case-wide-img reveal-up" alt="Trip segment solution explorations" />
+
+        <div class="case-callout reveal-fade">
+          <p>The final trip segment visualization kept the "Report an issue" as a smaller, less prominent link instead of a button. Due to engineering restraints we also had to remove the trip speed information.</p>
+        </div>
+
+        <img src="../driving-insights/images/TripSegment.png" class="case-wide-img reveal-up" alt="Final trip segment design" />
+
+        <!-- My Role -->
+        <div class="case-section reveal-up">
+          <h2>My Role</h2>
+          <p>Product Designer, leading the design vision and creating all assets, screens and visuals.</p>
+        </div>
+
       </div>
     </section>
 
@@ -161,7 +229,6 @@
         <p class="next-case__label">Next project</p>
         <a href="insurance-card.html" class="next-case__link">
           <h2 class="next-case__title">Insurance Hub →</h2>
-          <p style="color: var(--clr-text-2); font-size: var(--fs-md); margin-top: var(--space-2);">Fintech · Mobile · Accessibility</p>
         </a>
       </div>
     </section>
