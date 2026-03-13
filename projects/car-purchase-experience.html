@@ -3,12 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Car Purchase Experience — Case study by Livia R Chauar. End-to-end redesign of the car buying journey on OLX's classifieds platform." />
-  <title>Car Purchase Experience — Livia R Chauar</title>
+  <meta name="description" content="Car Background Check — Case study by Livia R Chauar. Making car buyers feel safer transacting online on OLX's classifieds platform." />
+  <title>Car Background Check — Livia R Chauar</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;1,14..32,300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+    .case-body .case-section h2,
+    .case-body .case-split__text h2 {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+    }
+  </style>
 </head>
 <body>
 
@@ -51,10 +59,11 @@
           </a>
           <span class="tag">Automotive</span>
           <span class="tag">Classifieds</span>
+          <span class="tag">Mobile</span>
         </div>
 
         <p class="case-hero__intro reveal-up">
-          End-to-end redesign of the car buying journey on OLX's classifieds platform, reducing drop-off and increasing purchase confidence for first-time buyers.
+          How might we make buyers feel safer while transacting cars online
         </p>
 
       </div>
@@ -74,15 +83,19 @@
             </div>
             <div class="case-hero__stat">
               <dt>Year</dt>
-              <dd>2020–2021</dd>
+              <dd>2020</dd>
             </div>
             <div class="case-hero__stat">
               <dt>Company</dt>
               <dd>OLX</dd>
             </div>
+            <div class="case-hero__stat">
+              <dt>Status</dt>
+              <dd>Released</dd>
+            </div>
           </dl>
           <p class="case-hero__desc">
-            End-to-end redesign of the car buying journey on OLX's classifieds platform, reducing drop-off and increasing purchase confidence for first-time buyers.
+            A car background check product offered to sellers as an incentive and displayed for free to buyers — reducing the uncertainty that makes online car transactions feel like a gamble.
           </p>
         </div>
       </div>
@@ -92,16 +105,159 @@
     <!-- ░░ CASE BODY ░░ -->
     <section class="case-body" aria-label="Case study content">
       <div class="container">
-        <div class="case-body__inner">
 
-          <div class="case-section reveal-up">
-            <h2>Overview</h2>
-            <p>
-              Case study content coming soon.
-            </p>
+        <!-- Problem / Solution / Impact -->
+        <div class="case-section case-section--centered reveal-up">
+          <div class="case-grid-3">
+
+            <div class="case-grid-item">
+              <div class="case-grid-item__icon">
+                <i data-lucide="alert-triangle" width="32" height="32" aria-hidden="true"></i>
+              </div>
+              <p class="case-grid-item__title">Problem</p>
+              <p class="case-grid-item__body">The process of buying and selling a car is scary. OLX did not show all the necessary information for buyers to feel confident at first contact.</p>
+            </div>
+
+            <div class="case-grid-item">
+              <div class="case-grid-item__icon">
+                <i data-lucide="lightbulb" width="32" height="32" aria-hidden="true"></i>
+              </div>
+              <p class="case-grid-item__title">Solution</p>
+              <p class="case-grid-item__body">Provide a car background check product offered to sellers with incentives and displayed for free for buyers.</p>
+            </div>
+
+            <div class="case-grid-item">
+              <div class="case-grid-item__icon">
+                <i data-lucide="trending-up" width="32" height="32" aria-hidden="true"></i>
+              </div>
+              <p class="case-grid-item__title">Impact</p>
+              <p class="case-grid-item__body">20% growth in safety perception among buyers on the platform.</p>
+            </div>
+
           </div>
-
         </div>
+
+        <!-- Pull quote -->
+        <div class="case-pullquote reveal-up">
+          <p>For the average buyer, the ads at OLX simply do not provide enough information to be sure that the seller is not a thief or if the car even exists, <strong>let alone if the information provided is accurate.</strong></p>
+        </div>
+
+        <!-- My Role -->
+        <div class="case-section reveal-up">
+          <h2>My Role</h2>
+          <p>I was the project's Main Product Designer. I led the visual and interaction explorations and worked throughout the design organization for consistency and alignment.</p>
+        </div>
+
+        <!-- Problem space -->
+        <div class="case-section reveal-up">
+          <h2>Problem space</h2>
+          <p>Buying cars online is a gamble. Until the meeting, when both seller and buyer see each other face to face, there is no way to know if the seller is telling the truth about the car.</p>
+          <p>OLX's car listings lacked the transparency buyers needed to feel confident before making contact — leaving room for fraud, misinformation, and distrust that hurt conversion on both sides.</p>
+        </div>
+
+        <!-- Product requirements (design principles) -->
+        <div class="case-section case-section--centered reveal-up">
+          <h2>Product requirements</h2>
+          <div class="case-grid-3">
+
+            <div class="case-grid-item">
+              <div class="case-grid-item__icon">
+                <i data-lucide="crosshair" width="32" height="32" aria-hidden="true"></i>
+              </div>
+              <p class="case-grid-item__title">Specific</p>
+              <p class="case-grid-item__body">Although many details contribute to a feeling of safety, the solution should relate to <strong>car elements only</strong>.</p>
+            </div>
+
+            <div class="case-grid-item">
+              <div class="case-grid-item__icon">
+                <i data-lucide="layers" width="32" height="32" aria-hidden="true"></i>
+              </div>
+              <p class="case-grid-item__title">Contextual &amp; noninvasive</p>
+              <p class="case-grid-item__body">The solution should feel like <strong>part of the ad experience</strong> and not a detached value-added service.</p>
+            </div>
+
+            <div class="case-grid-item">
+              <div class="case-grid-item__icon">
+                <i data-lucide="message-circle" width="32" height="32" aria-hidden="true"></i>
+              </div>
+              <p class="case-grid-item__title">Easy to understand</p>
+              <p class="case-grid-item__body">"Car-speech" is hard. The solution should communicate with <strong>both experts and novice buyers</strong> equally.</p>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- First studies -->
+        <div class="case-section reveal-up">
+          <h2>First studies</h2>
+          <p>The solution required two flows: one for buyers to view vehicle data, and one for sellers to opt in and input their background check. Below are some of the design explorations for the visualization inside the car product page — each with different visual approaches that the team later explored in user testing.</p>
+        </div>
+
+        <div class="case-charts reveal-up">
+          <img src="../car-purchase-experience/images/Study1.gif" class="case-charts__img" alt="Design study 1 — background check component exploration" />
+          <img src="../car-purchase-experience/images/Study2.gif" class="case-charts__img" alt="Design study 2 — background check component exploration" />
+          <img src="../car-purchase-experience/images/Study3.gif" class="case-charts__img" alt="Design study 3 — background check component exploration" />
+        </div>
+
+        <!-- Research callout -->
+        <div class="case-pullquote reveal-up">
+          <p><strong>Research with users showed that they ignored the component when viewing the ad.</strong></p>
+        </div>
+
+        <!-- Solution -->
+        <div class="case-section reveal-up">
+          <h2>Solution</h2>
+          <p>To attract attention to the component, we researched which information from the background check was the most relevant for buyers. The three pieces of information that resonated most were:</p>
+          <ul>
+            <li>How many owners the car had</li>
+            <li>How many unpaid traffic tickets the car had</li>
+            <li>Whether the car had ever been auctioned</li>
+          </ul>
+          <p>We used this information as the primary selling point and, to make the component even more noticeable, added a custom illustration following OLX's illustration system.</p>
+        </div>
+
+        <img src="../car-purchase-experience/images/Component.png" class="case-wide-img reveal-up" alt="Background check component — final design" />
+
+        <!-- Full page visualization -->
+        <div class="case-section reveal-up">
+          <h2>Full vehicle history page</h2>
+          <p>After refining the entry-point component, we created the full visualization as a simple dedicated page with all the necessary information for the buyer. We also researched the best way to explain certain technical information that was not easily understood by OLX's user base.</p>
+        </div>
+
+        <img src="../car-purchase-experience/images/historicoveicular.gif" class="case-wide-img reveal-up" alt="Full vehicle history page — final design" />
+
+        <!-- Impact -->
+        <div class="case-section case-section--centered reveal-up">
+          <h2>Impact</h2>
+          <div class="case-grid-3">
+
+            <div class="case-grid-item">
+              <div class="case-grid-item__icon">
+                <i data-lucide="shield-check" width="32" height="32" aria-hidden="true"></i>
+              </div>
+              <p class="case-grid-item__title">20%</p>
+              <p class="case-grid-item__body">Growth in safety perception among buyers on the platform.</p>
+            </div>
+
+            <div class="case-grid-item">
+              <div class="case-grid-item__icon">
+                <i data-lucide="bar-chart-2" width="32" height="32" aria-hidden="true"></i>
+              </div>
+              <p class="case-grid-item__title">3%</p>
+              <p class="case-grid-item__body">Growth in conversion rate for ads that included a car background check.</p>
+            </div>
+
+            <div class="case-grid-item">
+              <div class="case-grid-item__icon">
+                <i data-lucide="users" width="32" height="32" aria-hidden="true"></i>
+              </div>
+              <p class="case-grid-item__title">4%</p>
+              <p class="case-grid-item__body">Of sellers reported better quality leads from ads with a background check available.</p>
+            </div>
+
+          </div>
+        </div>
+
       </div>
     </section>
 
