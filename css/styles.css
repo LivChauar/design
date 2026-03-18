@@ -1345,7 +1345,15 @@ a.tag { text-decoration: none; }
 }
 
 .case-section {
-  margin-bottom: clamp(var(--space-12), 6vw, var(--space-20));
+  margin-bottom: 96px;
+}
+
+/* Last direct child of a section removes its own bottom margin so the
+   section margin alone controls the gap */
+.case-section > .case-split:last-child,
+.case-section > .case-charts--3col:last-child,
+.case-section > .cmt-showcase:last-child {
+  margin-bottom: 0;
 }
 
 .case-section h2 {
@@ -1959,6 +1967,86 @@ a.tag { text-decoration: none; }
   height: auto;
   display: block;
   margin-bottom: clamp(var(--space-10), 6vw, var(--space-16));
+}
+
+/* ── SUBSECTION LABEL + BODY (within two-column sections) ── */
+.case-subsection {
+  margin-top: var(--space-10);
+  margin-bottom: var(--space-6);
+}
+
+.case-subsection__label {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--clr-text);
+  margin-bottom: 8px;
+}
+
+.case-subsection__body {
+  font-size: var(--fs-base);
+  font-weight: 400;
+  color: var(--clr-text-2);
+  line-height: 1.75;
+}
+
+/* ── 3-COLUMN IMAGE GRID with 24px gap ── */
+.case-charts--3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .case-charts--3col { grid-template-columns: 1fr; }
+}
+
+/* ── DETAIL SUBSECTION split (sits 24px below images, no extra bottom margin) ── */
+.case-split--detail-sub {
+  margin-top: 24px;
+  margin-bottom: 0;
+}
+
+/* ── PLAIN NUMBERED LIST (no circles, no green) ── */
+.case-plain-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.case-plain-list__item {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+}
+
+.case-plain-list__num {
+  font-size: var(--fs-base);
+  font-weight: 700;
+  color: var(--clr-text);
+  flex-shrink: 0;
+  width: 20px;
+  padding-top: 2px;
+  line-height: 1.5;
+}
+
+.case-plain-list__content strong {
+  display: block;
+  font-size: var(--fs-base);
+  font-weight: 700;
+  color: var(--clr-text);
+  margin-bottom: 2px;
+}
+
+.case-plain-list__content p {
+  font-size: var(--fs-sm);
+  color: var(--clr-text-2);
+  line-height: 1.65;
+  margin: 0;
 }
 
 /* Numbered annotation list (trip detail component) */

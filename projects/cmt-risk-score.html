@@ -110,7 +110,7 @@
     <section class="case-body" aria-label="Case study content">
       <div class="container">
 
-        <!-- Key learnings -->
+        <!-- ── DETAIL: Key learnings (3-col) ── -->
         <div class="case-section case-section--centered reveal-up">
           <h2>Key learnings from Driving Insights</h2>
           <div class="case-grid-3">
@@ -133,12 +133,12 @@
           </div>
         </div>
 
-        <!-- Pull quote -->
+        <!-- ── CALLOUT ── -->
         <div class="case-pullquote reveal-up">
           <p>We had to provide users with the means to <strong>measure safe driving behavior</strong> and clear, <strong>actionable feedback</strong>.<br><br>We needed a way to <strong>motivate users to act on the feedback</strong>, while our end goal was to foster <strong>long term behavior change</strong>.</p>
         </div>
 
-        <!-- ░░ HERO VIDEO ░░ -->
+        <!-- ── LARGE VIDEO (centralized) ── -->
         <div class="case-video-wrap reveal-up">
           <video class="case-video" autoplay loop muted playsinline>
             <source src="../cmt-risk-score/videos/Hero_video.webm" type="video/webm" />
@@ -146,7 +146,7 @@
           </video>
         </div>
 
-        <!-- Design principles -->
+        <!-- ── DETAIL: Design principles (3-col with icons) ── -->
         <div class="case-section case-section--centered reveal-up">
           <h2>Design principles</h2>
           <div class="case-grid-3">
@@ -178,178 +178,189 @@
           </div>
         </div>
 
-        <!-- ░░ INTRODUCING THE DRIVING SCORE ░░ -->
-        <div class="case-split reveal-up">
-          <div class="case-split__text">
-            <h2>Introducing the driving score</h2>
-            <p>By introducing a score, we aimed to provide a place for drivers to quickly identify and understand their own driving behavior. Incorporating it into a social proof framework competition, motivating drivers to strive for higher safety scores.</p>
-          </div>
-          <div class="case-split__media">
-            <img src="../cmt-risk-score/images/CMT_home.png" class="case-phones__img" alt="CMT home screen" />
-            <img src="../cmt-risk-score/images/CMT_feed.png" class="case-phones__img" alt="CMT feed screen" />
+        <!-- ── DESIGN DETAIL SIDE: Introducing the driving score (text left, images right) ── -->
+        <div class="case-section reveal-up">
+          <div class="case-split">
+            <div class="case-split__text">
+              <h2>Introducing the driving score</h2>
+              <p>By introducing a score, we aimed to provide a place for drivers to quickly identify and understand their own driving behavior. Incorporating it into a social proof framework competition, motivating drivers to strive for higher safety scores.</p>
+            </div>
+            <div class="case-split__media">
+              <img src="../cmt-risk-score/images/CMT_home.png" class="case-phones__img" alt="CMT home screen" />
+              <img src="../cmt-risk-score/images/CMT_feed.png" class="case-phones__img" alt="CMT feed screen" />
+            </div>
           </div>
         </div>
 
-        <!-- ░░ OPTIMIZING HIERARCHY ░░ -->
+        <!-- ── HIERARCHY: Optimizing hierarchy (always includes dynamic tooltips) ── -->
         <div class="case-section reveal-up">
           <h2>Optimizing hierarchy</h2>
           <div class="case-hierarchy-intro">
             <p>The page hierarchy was carefully designed to maximize the use of screen real estate while delivering the right information at each step of the user journey.</p>
             <p>The eye-catching main score would grab users' attention, while all necessary information would sit above the fold of most devices, including the entry point to view scored trips.</p>
           </div>
-        </div>
 
-        <!-- ░░ ANNOTATED SHOWCASE ░░ -->
-        <div class="cmt-showcase reveal-up">
+          <!-- Annotated showcase with tooltip annotations -->
+          <div class="cmt-showcase">
 
-          <!-- Left: Full_top.png + left-side annotations -->
-          <div class="cmt-showcase__left">
-            <div class="cmt-ann-sidebar cmt-ann-sidebar--left">
+            <!-- Left: Full_top.png + left-side annotations -->
+            <div class="cmt-showcase__left">
+              <div class="cmt-ann-sidebar cmt-ann-sidebar--left">
 
-              <div class="cmt-ann-entry" style="top: 25%">
-                <div class="cmt-ann-badge">
-                  1
-                  <div class="cmt-ann-popup">
-                    <strong class="cmt-ann-popup__title">Main score</strong>
-                    <p class="cmt-ann-popup__body">Score updates daily and provides feedback at a glance.</p>
+                <div class="cmt-ann-entry" style="top: 25%">
+                  <div class="cmt-ann-badge">
+                    1
+                    <div class="cmt-ann-popup">
+                      <strong class="cmt-ann-popup__title">Main score</strong>
+                      <p class="cmt-ann-popup__body">Score updates daily and provides feedback at a glance.</p>
+                    </div>
                   </div>
+                  <span class="cmt-ann-label">Main score</span>
                 </div>
-                <span class="cmt-ann-label">Main score</span>
-              </div>
 
-              <div class="cmt-ann-entry" style="top: 68%">
-                <div class="cmt-ann-badge">
-                  2
-                  <div class="cmt-ann-popup">
-                    <strong class="cmt-ann-popup__title">Score overview</strong>
-                    <p class="cmt-ann-popup__body">Behaviors that affect your score, with a highlight on what to focus to improve.</p>
+                <div class="cmt-ann-entry" style="top: 68%">
+                  <div class="cmt-ann-badge">
+                    2
+                    <div class="cmt-ann-popup">
+                      <strong class="cmt-ann-popup__title">Score overview</strong>
+                      <p class="cmt-ann-popup__body">Behaviors that affect your score, with a highlight on what to focus to improve.</p>
+                    </div>
                   </div>
+                  <span class="cmt-ann-label">Score overview</span>
                 </div>
-                <span class="cmt-ann-label">Score overview</span>
+
               </div>
-
-            </div>
-            <img
-              src="../cmt-risk-score/images/Full_top.png"
-              class="cmt-phone-img"
-              alt="CMT Risk Score — main score view"
-            />
-          </div>
-
-          <!-- Right: Full_bottom.png + right-side annotations (no blurb) -->
-          <div class="cmt-showcase__right">
-            <div class="cmt-showcase__phone-row">
               <img
-                src="../cmt-risk-score/images/Full_bottom.png"
+                src="../cmt-risk-score/images/Full_top.png"
                 class="cmt-phone-img"
-                alt="CMT Risk Score — score details view"
+                alt="CMT Risk Score — main score view"
               />
-              <div class="cmt-ann-sidebar cmt-ann-sidebar--right">
+            </div>
 
-                <div class="cmt-ann-entry" style="top: 15%">
-                  <div class="cmt-ann-badge">
-                    3
-                    <div class="cmt-ann-popup">
-                      <strong class="cmt-ann-popup__title">Humane messaging</strong>
-                      <p class="cmt-ann-popup__body">For education, motivation and actionable information.</p>
+            <!-- Right: Full_bottom.png + right-side annotations -->
+            <div class="cmt-showcase__right">
+              <div class="cmt-showcase__phone-row">
+                <img
+                  src="../cmt-risk-score/images/Full_bottom.png"
+                  class="cmt-phone-img"
+                  alt="CMT Risk Score — score details view"
+                />
+                <div class="cmt-ann-sidebar cmt-ann-sidebar--right">
+
+                  <div class="cmt-ann-entry" style="top: 15%">
+                    <div class="cmt-ann-badge">
+                      3
+                      <div class="cmt-ann-popup">
+                        <strong class="cmt-ann-popup__title">Humane messaging</strong>
+                        <p class="cmt-ann-popup__body">For education, motivation and actionable information.</p>
+                      </div>
                     </div>
+                    <span class="cmt-ann-label">Humane messaging</span>
                   </div>
-                  <span class="cmt-ann-label">Humane messaging</span>
-                </div>
 
-                <div class="cmt-ann-entry" style="top: 55%">
-                  <div class="cmt-ann-badge">
-                    4
-                    <div class="cmt-ann-popup">
-                      <strong class="cmt-ann-popup__title">Score history</strong>
-                      <p class="cmt-ann-popup__body">For motivation and improvement.</p>
+                  <div class="cmt-ann-entry" style="top: 55%">
+                    <div class="cmt-ann-badge">
+                      4
+                      <div class="cmt-ann-popup">
+                        <strong class="cmt-ann-popup__title">Score history</strong>
+                        <p class="cmt-ann-popup__body">For motivation and improvement.</p>
+                      </div>
                     </div>
+                    <span class="cmt-ann-label">Score history</span>
                   </div>
-                  <span class="cmt-ann-label">Score history</span>
-                </div>
 
-                <div class="cmt-ann-entry" style="top: 80%">
-                  <div class="cmt-ann-badge">
-                    5
-                    <div class="cmt-ann-popup">
-                      <strong class="cmt-ann-popup__title">More resources</strong>
-                      <p class="cmt-ann-popup__body">To provide information on data privacy and how they may improve even further.</p>
+                  <div class="cmt-ann-entry" style="top: 80%">
+                    <div class="cmt-ann-badge">
+                      5
+                      <div class="cmt-ann-popup">
+                        <strong class="cmt-ann-popup__title">More resources</strong>
+                        <p class="cmt-ann-popup__body">To provide information on data privacy and how they may improve even further.</p>
+                      </div>
                     </div>
+                    <span class="cmt-ann-label">More resources</span>
                   </div>
-                  <span class="cmt-ann-label">More resources</span>
-                </div>
 
+                </div>
               </div>
             </div>
+
           </div>
-
         </div>
 
-        <!-- ░░ TRANSPARENCY ░░ -->
-        <div class="case-pullquote reveal-up"">
-          <p class="case-statement">Transparency was non-negotiable, so CMT Risk Score included <strong>detailed information of driving behavior</strong>.</p>
-          <img src="../cmt-risk-score/images/FLOW.png" class="case-wide-img" alt="CMT Risk Score — user flow showing driving behavior detail screens" />
+        <!-- ── CALLOUT: Transparency ── -->
+        <div class="case-pullquote reveal-up">
+          <p>Transparency was non-negotiable, so CMT Risk Score included <strong>detailed information of driving behavior</strong>.</p>
         </div>
 
-        <!-- ░░ UI REFINEMENT ░░ -->
+        <!-- ── VIDEO: CMTRiskScore.webm ── -->
+        <div class="case-video-wrap reveal-up">
+          <video class="case-video" autoplay loop muted playsinline>
+            <source src="../cmt-risk-score/videos/CMTRiskScore.webm" type="video/webm" />
+          </video>
+        </div>
+
+        <!-- ── TWO COLUMN: UI Refinement ── -->
         <div class="case-section reveal-up">
           <h2>UI refinement</h2>
-          <div class="case-split case-split--text-only" style="margin-bottom: var(--space-8);">
-            <div class="case-split__text" style="flex: 1;">
+          <div class="case-split case-split--text-only">
+            <div class="case-split__text">
               <p>Each UI element was carefully crafted—from exploring entirely new ideas to working closely with established visuals from Uber's design surfaces.</p>
             </div>
-            <div class="case-split__text" style="flex: 1;">
+            <div class="case-split__text">
               <p>Components were thoroughly explored to ensure they aligned seamlessly with the overall experience. Many components were adjusted from existing Driver experience components.</p>
             </div>
           </div>
 
-          <!-- Trip detail component -->
-          <h3 style="font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 20px; font-weight: 600; letter-spacing: -0.01em; margin-bottom: var(--space-3);">Trip detail component</h3>
-          <p style="font-size: 16px; font-weight: 400; margin-bottom: var(--space-6);">Providing all the necessary information to users so they may evaluate the time and location of the behaviors detected.</p>
+          <!-- Subsection 1: Trip detail component -->
+          <div class="case-subsection">
+            <h3 class="case-subsection__label">Trip detail component</h3>
+            <p class="case-subsection__body">Providing all the necessary information to users so they may evaluate the time and location of the behaviors detected.</p>
+          </div>
 
-          <div class="case-charts" style="margin-bottom: var(--space-8);">
+          <div class="case-charts--3col">
             <img src="../cmt-risk-score/images/TripView_1.png" class="case-charts__img" alt="Trip view 1" />
             <img src="../cmt-risk-score/images/TripView_2.png" class="case-charts__img" alt="Trip view 2" />
             <img src="../cmt-risk-score/images/TripView_3.png" class="case-charts__img" alt="Trip view 3" />
           </div>
 
-          <div class="case-split" style="margin-bottom: var(--space-10);">
+          <!-- Detail subsection: TripItem_Detail + plain numbered list, 24px below images -->
+          <div class="case-split case-split--detail-sub">
             <div class="case-split__media">
               <img src="../cmt-risk-score/images/TripItem_Detail.png" class="case-phones__img" alt="Trip item detail component annotated" />
             </div>
             <div class="case-split__text">
-              <ul class="case-annot-list">
-                <li class="case-annot-list__item">
-                  <div class="case-annot-list__num">1</div>
-                  <div class="case-annot-list__content">
+              <ul class="case-plain-list">
+                <li class="case-plain-list__item">
+                  <span class="case-plain-list__num">1</span>
+                  <div class="case-plain-list__content">
                     <strong>Trip metadata</strong>
                     <p>All relevant trip information is displayed.</p>
                   </div>
                 </li>
-                <li class="case-annot-list__item">
-                  <div class="case-annot-list__num">2</div>
-                  <div class="case-annot-list__content">
+                <li class="case-plain-list__item">
+                  <span class="case-plain-list__num">2</span>
+                  <div class="case-plain-list__content">
                     <strong>Behaviors detected</strong>
                     <p>Behaviors are shown as tags that may be filtered by the user.</p>
                   </div>
                 </li>
-                <li class="case-annot-list__item">
-                  <div class="case-annot-list__num">3</div>
-                  <div class="case-annot-list__content">
+                <li class="case-plain-list__item">
+                  <span class="case-plain-list__num">3</span>
+                  <div class="case-plain-list__content">
                     <strong>Map</strong>
                     <p>The map displays behaviors as icons for further inspection.</p>
                   </div>
                 </li>
-                <li class="case-annot-list__item">
-                  <div class="case-annot-list__num">4</div>
-                  <div class="case-annot-list__content">
+                <li class="case-plain-list__item">
+                  <span class="case-plain-list__num">4</span>
+                  <div class="case-plain-list__content">
                     <strong>Pick up and drop off</strong>
                     <p>Beginning and end of trip are signaled.</p>
                   </div>
                 </li>
-                <li class="case-annot-list__item">
-                  <div class="case-annot-list__num">5</div>
-                  <div class="case-annot-list__content">
+                <li class="case-plain-list__item">
+                  <span class="case-plain-list__num">5</span>
+                  <div class="case-plain-list__content">
                     <strong>Report an issue</strong>
                     <p>If the user believes there is a problem with a detected behavior, they may reach out for questions.</p>
                   </div>
@@ -358,26 +369,27 @@
             </div>
           </div>
 
-          <!-- Graph component -->
-          <h3 style="font-family: 'Inter', system-ui, -apple-system, sans-serif; font-size: 20px; font-weight: 600; letter-spacing: -0.01em; margin-bottom: var(--space-3);">Graph component</h3>
-          <p style="font-size: 16px; font-weight: 400; margin-bottom: var(--space-6);">While Uber Design System had an existing graph, we explored new formats to better showcase progress to Uber Drivers. Once again, we worked on top of what we had previously created for Driving Insights.</p>
+          <!-- Subsection 2: Graph component -->
+          <div class="case-subsection">
+            <h3 class="case-subsection__label">Graph component</h3>
+            <p class="case-subsection__body">While Uber Design System had an existing graph, we explored new formats to better showcase progress to Uber Drivers. Once again, we worked on top of what we had previously created for Driving Insights.</p>
+          </div>
 
-          <div class="case-charts">
+          <div class="case-charts--3col">
             <img src="../cmt-risk-score/images/Chart_1.png" class="case-charts__img" alt="Graph exploration 1" />
             <img src="../cmt-risk-score/images/Chart_2.png" class="case-charts__img" alt="Graph exploration 2" />
             <img src="../cmt-risk-score/images/Chart_3.png" class="case-charts__img" alt="Graph exploration 3" />
-            <img src="../cmt-risk-score/images/Chart_4.png" class="case-charts__img" alt="Graph exploration 4" />
           </div>
         </div>
 
-        <!-- ░░ THE RESULTS ░░ -->
+        <!-- ── THE RESULTS: Two column ── -->
         <div class="case-section reveal-up">
           <h2>The results</h2>
           <div class="case-split case-split--text-only">
-            <div class="case-split__text" style="flex: 1;">
+            <div class="case-split__text">
               <p>CMT Risk Score unlocked new opportunities to support drivers in adopting safer driving behaviors.</p>
             </div>
-            <div class="case-split__text" style="flex: 1;">
+            <div class="case-split__text">
               <p>The product is still up and running on Uber Driver app, constantly updated to foster safe driving behavior amongst drivers.</p>
             </div>
           </div>
