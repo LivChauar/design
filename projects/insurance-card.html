@@ -9,14 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;1,14..32,300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css" />
-  <style>
-    .case-body .case-section h2,
-    .case-body .case-split__text h2 {
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      font-weight: 600;
-      letter-spacing: -0.015em;
-    }
-  </style>
 </head>
 <body>
 
@@ -48,6 +40,11 @@
 
   <main>
 
+    <!-- ░░ WIP BANNER ░░ -->
+    <div class="wip-banner" role="alert">
+      This page is currently a work in progress — content may be incomplete or subject to change.
+    </div>
+
     <!-- ░░ CASE HERO ░░ -->
     <section class="case-hero" aria-label="Project overview">
       <div class="container">
@@ -63,7 +60,7 @@
         </div>
 
         <p class="case-hero__intro reveal-up">
-          Driving insights released in 2021 was a success, and so we went for more. What if we showed drivers all dangerous behaviors and provided them with a score?
+          Insurance Hub provides Uber Drivers with the information they need in a understandable manner, while also serving as the go-to location for insurance products and related content.
         </p>
 
       </div>
@@ -94,7 +91,7 @@
             </div>
           </dl>
           <p class="case-hero__desc">
-            A redesigned Insurance Hub for Uber Drivers, built around their mental models and real insurance needs — surfacing the right information at the right moment.
+            A redesigned Insurance Hub for Uber Drivers, built around their mental models and real insurance needs — surfacing the right information at the right moment. After years of unchanging design, the Insurance surface had a much needed facelift.
           </p>
         </div>
       </div>
@@ -105,102 +102,76 @@
     <section class="case-body" aria-label="Case study content">
       <div class="container">
 
-        <!-- Problem / Solution / Impact -->
+        <!-- ── Problem / Solution / Impact ── -->
         <div class="case-section case-section--centered reveal-up">
           <div class="case-grid-3">
 
-              <div class="case-grid-item">
-                <div class="case-grid-item__icon">
-                  <i data-lucide="alert-circle" width="32" height="32" aria-hidden="true"></i>
-                </div>
-                <p class="case-grid-item__title">Problem</p>
-                <p class="case-grid-item__body">Albeit fundamental to Uber, the Insurance Hub was over five years old and failed to address both Driver's and Uber's needs</p>
-              </div>
+            <div class="case-grid-item">
+              <p class="case-grid-item__title">Problem</p>
+              <p class="case-grid-item__body">Albeit fundamental to Uber, the Insurance Hub was over five years old and failed to address both Driver's and Uber's needs</p>
+            </div>
 
-              <div class="case-grid-item">
-                <div class="case-grid-item__icon">
-                  <i data-lucide="lightbulb" width="32" height="32" aria-hidden="true"></i>
-                </div>
-                <p class="case-grid-item__title">Solution</p>
-                <p class="case-grid-item__body">A new Insurance Hub whose IA and structure are optimized to match the Driver's mental models and provide information while surfacing product offers in the future.</p>
-              </div>
+            <div class="case-grid-item">
+              <p class="case-grid-item__title">Solution</p>
+              <p class="case-grid-item__body">A new Insurance Hub whose IA and structure are optimized to match the Driver's mental models and provide information while surfacing product offers in the future.</p>
+            </div>
 
-              <div class="case-grid-item">
-                <div class="case-grid-item__icon">
-                  <i data-lucide="bar-chart-2" width="32" height="32" aria-hidden="true"></i>
-                </div>
-                <p class="case-grid-item__title">Impact</p>
-                <p class="case-grid-item__body">Currently under development</p>
-              </div>
+            <div class="case-grid-item">
+              <p class="case-grid-item__title">Impact</p>
+              <p class="case-grid-item__body">Currently under development</p>
+            </div>
 
           </div>
         </div>
 
-        <!-- My Role -->
-          <div class="case-section reveal-up">
-            <h2>My Role</h2>
-            <p>I was the Lead Product Designer for this project, responsible for leading the vision, managing stakeholders, syncing and aligning across the design org and engineering team.</p>
-            <p>Led the co-creation workshop with internal and external teams during the discovery phase, and partnered up with the UXR for the interviews, shadowing, roundtables, and user testing.</p>
-            <p>I also mentored a Design Intern and a Design Apprentice during this project.</p>
+        <!-- ── The problem space ── -->
+        <div class="case-section reveal-up">
+          <h2>The problem space</h2>
+          <div class="case-split case-split--text-only">
+            <div class="case-split__text">
+              <p>Uber is heavily impacted by Insurance, and insurance cost savings are one of the company's main focus areas. Yet, the Insurance Hub, the main surface for Driver insurance information, was over six years old.</p>
+            </div>
+            <div class="case-split__text">
+              <p>The Insurance team went through a month-long research with Drivers, Uber's internal Insurance team, and our third-party partners, performing shadowing, interviews, co-creation workshops, mapping the end-to-end experience, and identifying areas of improvement.</p>
+            </div>
           </div>
+        </div>
 
-          <!-- Problem space -->
-          <div class="case-section reveal-up">
-            <h2>Problem space</h2>
-            <p>Uber is heavily impacted by Insurance, and insurance cost savings are one of the company's main focus areas. Yet, the Insurance Hub, the main surface for Driver insurance information, was over six years old.</p>
-            <p>The Insurance team went through a month-long research with Drivers, Uber's internal Insurance team, and our third-party partners, performing shadowing, interviews, co-creation workshops, mapping the end-to-end experience, and identifying areas of improvement.</p>
-            <p>For the Insurance Hub, we saw the opportunity to leverage an existing surface and show evergreen insurance information.</p>
+        <!-- ── Callout 1 ── -->
+        <div class="case-pullquote reveal-up">
+          <p>Users considered Uber's Insurance information <strong>too complex to understand and too hard to find.</strong></p>
+        </div>
+
+        <!-- ── Callout 2 ── -->
+        <div class="case-pullquote reveal-up">
+          <p>While we could improve discoverability of insurance information on other surfaces for a holistic approach, giving users a <strong>reliable evergreen insurance surface</strong> where the information would be <strong>simple and easy to use</strong> was our next big bet.</p>
+        </div>
+
+        <!-- ── Explorations ── -->
+        <img src="../insurance-card/images/Explorations.png" alt="Insurance Hub design explorations" class="case-wide-img reveal-up" />
+
+        <!-- ── Surface goals ── -->
+        <div class="case-section case-section--centered reveal-up">
+          <h2>Surface goals</h2>
+          <div class="case-grid-3">
+
+            <div class="case-grid-item">
+              <p class="case-grid-item__title">Centralize</p>
+              <p class="case-grid-item__body">Centralize entry points for all insurance-related products and information. Users should quickly refer to this page when looking for insurance information.</p>
+            </div>
+
+            <div class="case-grid-item">
+              <p class="case-grid-item__title">Emphasize</p>
+              <p class="case-grid-item__body">As insurance information complexity was a major pain point, emphasizing what primary insurances are, and when to use each one of them, was fundamental.</p>
+            </div>
+
+            <div class="case-grid-item">
+              <p class="case-grid-item__title">Highlight</p>
+              <p class="case-grid-item__body">With a brand new surface dedicated to insurance-related information, we saw the opportunity to create new points of sale for insurance add-ons and optional insurance products.</p>
+            </div>
+
           </div>
-
-          <!-- Surface goals -->
-          <div class="case-section reveal-up">
-            <h2>Surface goals</h2>
-            <ul>
-              <li><strong>Centralize</strong> entry points for all insurance-related products and information</li>
-              <li><strong>Emphasize</strong> what primary insurances are, and when to use each one of them</li>
-              <li><strong>Highlight</strong> optional products available for purchase</li>
-            </ul>
-          </div>
-
-          <!-- Exploring the Hub -->
-          <div class="case-section reveal-up">
-            <h2>Exploring the Hub</h2>
-            <p>We explored a variety of hierarchies and visual treatments for the information on Insurance Hub. Keeping with Baseweb's capabilities, we tested the limits of what was feasible on this design system. We also proposed other IAs for the page and aimed at Uber's far future of insurance.</p>
-          </div>
-
-          <img src="../insurance-card/images/Explorations.png" alt="Hub exploration concepts" class="case-wide-img reveal-up" />
-
-          <div class="case-callout reveal-fade">
-            <p>Due to the amount of products available, we decided not to expand the page to include a dedicated, fully-fledged marketplace. Additionally, education was dropped as we couldn't create new learning materials.</p>
-          </div>
-
-          <!-- The Insurance Card -->
-          <div class="case-section reveal-up">
-            <h2>The Insurance Card</h2>
-            <p>The insurance card is ingrained into the user's mental model. Frequently cited as being used right off the bat during a crash, we designed a card solution for diverse insurance-related situations.</p>
-          </div>
-
-          <img src="../insurance-card/images/Cards.png" alt="Insurance card design explorations" class="case-wide-img reveal-up" />
-
-          <div class="case-section reveal-up">
-            <p>The final insurance card available on the Insurance Hub emphasizes at which moment of the trip experience insurance was active, the insurance number, and the carrier. Its function is to display information at the hub.</p>
-          </div>
-
-          <img src="../insurance-card/images/Insurance_Card.png" alt="Final insurance card design" class="case-wide-img reveal-up" />
-
-          <div class="case-callout reveal-fade">
-            <p>The insurance card would be available at the Insurance Hub by default. However, it was also to be available to drivers at other points of their experience.</p>
-          </div>
-
-          <img src="../insurance-card/images/OtherMoments.png" alt="Insurance card available at other moments in the driver experience" class="case-wide-img reveal-up" />
-
-          <!-- The final hub -->
-          <div class="case-section reveal-up">
-            <h2>The final hub</h2>
-            <p>Finally, we achieved a hierarchy that seemed to implement all the feedback gathered from users during testing sessions.</p>
-          </div>
-
-          <img src="../insurance-card/images/Section+1.jpg" alt="Final Insurance Hub design" class="case-wide-img reveal-up" />
+        </div>
 
       </div>
     </section>
@@ -241,6 +212,8 @@
             <a href="review-center.html">Review Center</a>
             <a href="driving-insights.html">Driving Insights</a>
             <a href="insurance-card.html">Insurance Hub</a>
+            <a href="catalog-management.html">Catalog Management</a>
+            <a href="car-purchase-experience.html">Car Purchase Experience</a>
           </div>
           <div class="footer__nav-col">
             <span class="footer__nav-heading">Connect</span>

@@ -40,6 +40,11 @@
 
   <main>
 
+    <!-- ░░ WIP BANNER ░░ -->
+    <div class="wip-banner" role="alert">
+      This page is currently a work in progress — content may be incomplete or subject to change.
+    </div>
+
     <!-- ░░ CASE HERO ░░ -->
     <section class="case-hero" aria-label="Project overview">
       <div class="container">
@@ -54,7 +59,7 @@
         </div>
 
         <p class="case-hero__intro reveal-up">
-          The new Catalog Manager provides scalable catalog management capabilities for merchants of all types, enabling them to easily personalize and manage their presence on Uber Eats.
+          The new Catalog Manager empowers merchants of all sizes with scalable tools to effortlessly manage, customize, and optimize their product offerings on Uber Eats.
         </p>
 
       </div>
@@ -96,30 +101,21 @@
     <section class="case-body" aria-label="Case study content">
       <div class="container">
 
-        <!-- Problem / Solution / Impact -->
+        <!-- ── Problem / Solution / Impact ── -->
         <div class="case-section case-section--centered reveal-up">
           <div class="case-grid-3">
 
             <div class="case-grid-item">
-              <div class="case-grid-item__icon">
-                <i data-lucide="alert-triangle" width="32" height="32" aria-hidden="true"></i>
-              </div>
               <p class="case-grid-item__title">Problem</p>
               <p class="case-grid-item__body">Separate experiences for each merchant type created operational complexity. Despite overlapping requirements, features were inconsistent and multi-location support was missing.</p>
             </div>
 
             <div class="case-grid-item">
-              <div class="case-grid-item__icon">
-                <i data-lucide="lightbulb" width="32" height="32" aria-hidden="true"></i>
-              </div>
               <p class="case-grid-item__title">Solution</p>
               <p class="case-grid-item__body">A flexible catalog management surface that adapts to different merchant types, surfacing the right tools for each business while enabling fast catalog setup and updates.</p>
             </div>
 
             <div class="case-grid-item">
-              <div class="case-grid-item__icon">
-                <i data-lucide="trending-up" width="32" height="32" aria-hidden="true"></i>
-              </div>
               <p class="case-grid-item__title">Impact</p>
               <p class="case-grid-item__body">Test fase</p>
             </div>
@@ -127,16 +123,50 @@
           </div>
         </div>
 
-        <!-- Delving into the problem -->
+        <!-- ── Delving into the problem ── -->
         <div class="case-section reveal-up">
           <h2>Delving into the problem</h2>
           <div class="case-split case-split--text-only">
-            <div class="case-split__text" style="flex: 1;">
+            <div class="case-split__text">
               <p>Building a deep understanding of the product environment was essential at the start of the project. During the first weeks, the design team facilitated a series of workshops and collaborative sessions with cross-functional partners.</p>
             </div>
-            <div class="case-split__text" style="flex: 1;">
-              <p>These sessions helped us evaluate the technical landscape — including backend infrastructure, system capabilities, and constraints — while also conducting competitor analysis and a UX audit of the existing Uber Eats experience.</p>
+            <div class="case-split__text">
+              <p>These sessions helped us evaluate the technical landscape, including backend infrastructure, system capabilities, and constraints, while also conducting competitor analysis and a UX audit of the existing Uber Eats experience.</p>
             </div>
+          </div>
+
+          <img src="../catalog-management/images/Heuristic evaluation.png" alt="Heuristic evaluation of the existing Uber Eats Catalog Manager experience" class="case-wide-img" />
+          <span class="case-img-caption">Evaluating the current experience and interviewing current users was essential to understand the gaps in the platform</span>
+
+          <img src="../catalog-management/images/JamSession.png" alt="Jam session with stakeholders mapping usability issues and opportunities" class="case-wide-img" />
+          <span class="case-img-caption">Connecting with the stakeholders in engaging jams was fundamental to find usability issues, common problems identified through the years, and inspiration for future features</span>
+        </div>
+
+        <!-- ── Design principles ── -->
+        <div class="case-section case-section--centered reveal-up">
+          <h2>Design principles</h2>
+          <div class="case-grid-4">
+
+            <div class="case-grid-item">
+              <p class="case-grid-item__title">Intuitive</p>
+              <p class="case-grid-item__body">Tasks should be able to be finished quickly so the user can move to other high-priority tasks.</p>
+            </div>
+
+            <div class="case-grid-item">
+              <p class="case-grid-item__title">Reliable</p>
+              <p class="case-grid-item__body">Users shouldn't have to learn Uber speak to manage their catalogs. Terminology should be clear, following patterns from the industry.</p>
+            </div>
+
+            <div class="case-grid-item">
+              <p class="case-grid-item__title">Fast and efficient</p>
+              <p class="case-grid-item__body">Users should know exactly what will happen when they take an action, and Uber should notify the user of anything that may require their attention.</p>
+            </div>
+
+            <div class="case-grid-item">
+              <p class="case-grid-item__title">Scalable and adaptive</p>
+              <p class="case-grid-item__body">Uber should conform to the way users run their business and not the other way around. In case of expansion, Uber should be capable of handling multiple stores at the same time.</p>
+            </div>
+
           </div>
         </div>
 
