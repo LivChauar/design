@@ -2125,11 +2125,29 @@ a.tag { text-decoration: none; }
   font-style: italic;
   color: var(--clr-text-3);
   text-align: center;
-  margin-top: var(--space-3);
+  margin-top: 0;
   margin-bottom: clamp(var(--space-8), 4vw, var(--space-12));
   max-width: 72ch;
   margin-inline: auto;
   display: block;
+}
+
+/* Collapse image bottom margin when caption follows — gives exactly 8px gap */
+.case-wide-img:has(+ .case-img-caption),
+.case-charts:has(+ .case-img-caption),
+.case-charts--3col:has(+ .case-img-caption),
+.case-video-wrap:has(+ .case-img-caption) {
+  margin-bottom: 8px;
+}
+
+/* Mobile: tappable images */
+@media (max-width: 768px) {
+  .case-wide-img,
+  .case-charts__img,
+  .case-phones__img,
+  .cmt-phone-img {
+    cursor: zoom-in;
+  }
 }
 
 /* ── 17. REDUCED MOTION ───────────────────────────────────── */

@@ -318,6 +318,29 @@ const qsa = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
   }
 })();
 
+/* ── 13. MOBILE IMAGE TAP — open in new tab ─────────────── */
+(function initMobileImageTap() {
+  const BREAKPOINT = 768;
+  const isMobile   = () => window.innerWidth <= BREAKPOINT;
+
+  const selectors = [
+    '.case-wide-img',
+    '.case-charts__img',
+    '.case-phones__img',
+    '.cmt-phone-img',
+  ].join(', ');
+
+  qsa(selectors).forEach(img => {
+    if (img.closest('a')) return; // already wrapped in a link
+
+    img.addEventListener('click', () => {
+      if (!isMobile()) return;
+      const src = img.currentSrc || img.src;
+      if (src) window.open(src, '_blank', 'noopener,noreferrer');
+    });
+  });
+})();
+
 /* ── 12. TAG FILTER (projects page) ─────────────────────── */
 (function initTagFilter() {
   const filterBtns = qsa('.filter-btn');
