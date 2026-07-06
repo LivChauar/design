@@ -7,7 +7,7 @@
   <title>Lívia R Chauar - Product Designer. Artist. Illustrator.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Syne:wght@400;500;600;700;800&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;1,14..32,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Outline&family=Bungee+Shade&family=Rubik+Mono+One&family=Syne:wght@400;500;600;700;800&family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;1,14..32,300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
@@ -51,32 +51,40 @@
 
       <div class="hero__inner container">
 
+        <!-- Halftone macaw illustration -->
+        <div class="hero__bird-col" aria-hidden="true">
+          <canvas id="macawCanvas" class="hero__bird-canvas"></canvas>
+        </div>
+
+        <!-- Text column -->
+        <div class="hero__text-col">
+
         <h1 class="hero__title">
           <span class="hero__title-line reveal-up" style="--delay: 0.1s">
-            <span class="hero__title-line__shade">Lívia Chauar is</span>
-            <span class="hero__title-line__fill">Lívia Chauar is</span>
+            <span class="hero__title-line__shade">Designing pleasing</span>
+            <span class="hero__title-line__fill">Designing pleasing</span>
           </span>
           <span class="hero__title-line reveal-up" style="--delay: 0.2s">
-            <span class="hero__title-line__shade">designing for</span>
-            <span class="hero__title-line__fill">designing for</span>
+            <span class="hero__title-line__shade">and efficient</span>
+            <span class="hero__title-line__fill">and efficient</span>
+          </span>
+          <span class="hero__title-line reveal-up" style="--delay: 0.25s">
+            <span class="hero__title-line__shade">experiences</span>
+            <span class="hero__title-line__fill">experiences</span>
           </span>
           <span class="hero__title-line hero__title-line--accent reveal-up" style="--delay: 0.3s">
-            <span class="hero__title-line__shade">Uber, NYC!</span>
-            <span class="hero__title-line__fill">Uber, NYC!</span>
+            <span class="hero__title-line__shade">at Uber, NYC</span>
+            <span class="hero__title-line__fill">at Uber, NYC</span>
           </span>
         </h1>
 
         <div class="hero__actions reveal-fade" style="--delay: 0.5s">
-          <a href="index.html#work" class="btn btn--primary">View my work</a>
-          <a href="about.html" class="btn btn--outline">About me</a>
+          <a href="index.html#work" class="btn btn--primary btn--hero">View my work</a>
+          <a href="about.html" class="btn btn--outline btn--hero">About me</a>
         </div>
 
-        <div class="hero__scroll reveal-fade" style="--delay: 1s" aria-hidden="true">
-          <div class="hero__scroll-arrow">
-            <i data-lucide="arrow-down" width="18" height="18" aria-hidden="true"></i>
-          </div>
-          <span>Scroll</span>
-        </div>
+
+        </div><!-- /.hero__text-col -->
       </div>
     </section>
 
@@ -195,6 +203,9 @@
 
         </div><!-- /.projects-grid -->
 
+        <!-- Halftone capybara decoration -->
+        <canvas id="capybaraCanvas" class="work__capybara" aria-hidden="true"></canvas>
+
         <div class="work__more reveal-fade">
           <a href="projects.html" class="btn btn--outline btn--large">
             <span>View all projects</span>
@@ -245,47 +256,7 @@
   <!-- ░░ FOOTER ░░ -->
   <footer class="footer" aria-label="Footer">
     <div class="container">
-      <div class="footer__inner">
-        <div class="footer__brand">
-          <a href="index.html" class="nav__logo">
-            <span class="nav__logo-mark">LC</span>
-            <span class="nav__logo-name">Livia R Chauar</span>
-          </a>
-          <p class="footer__tagline">Designing with purpose.</p>
-        </div>
-
-        <nav class="footer__nav" aria-label="Footer navigation">
-          <div class="footer__nav-col">
-            <span class="footer__nav-heading">Navigation</span>
-            <a href="index.html#work">Work</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">All Projects</a>
-          </div>
-          <div class="footer__nav-col">
-            <span class="footer__nav-heading">Projects</span>
-            <a href="projects/cmt-risk-score.html">CMT Risk Score</a>
-            <a href="projects/review-center.html">Review Center</a>
-            <a href="projects/driving-insights.html">Driving Insights</a>
-            <a href="projects/insurance-card.html">Insurance Hub</a>
-          </div>
-          <div class="footer__nav-col">
-            <span class="footer__nav-heading">Connect</span>
-            <a href="mailto:livia.chauar@gmail.com">Email</a>
-            <a href="https://www.linkedin.com/in/liviachauar/" target="_blank" rel="noopener">LinkedIn</a>
-            <a href="https://www.instagram.com/liviachauar/" target="_blank" rel="noopener">Instagram</a>
-            <a href="#" target="_blank" rel="noopener">Dribbble</a>
-            <a href="#" target="_blank" rel="noopener">Read.cv</a>
-          </div>
-        </nav>
-      </div>
-
-      <div class="footer__bottom">
-        <span class="footer__copy">&copy; 2025 Livia R Chauar. All rights reserved.</span>
-        <button class="footer__top-btn" id="backToTop" aria-label="Back to top">
-          <i data-lucide="arrow-up" width="16" height="16" aria-hidden="true"></i>
-          Back to top
-        </button>
-      </div>
+      <p class="footer__copy">&copy; 2025 Livia R Chauar. All rights reserved.</p>
     </div>
   </footer>
 

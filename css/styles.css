@@ -281,6 +281,12 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   font-size: var(--fs-base);
 }
 
+.btn--hero {
+  padding: var(--space-4) var(--space-10);
+  font-size: var(--fs-md);
+  border-width: 4px;
+}
+
 .btn svg { flex-shrink: 0; transition: transform var(--trans-base); }
 .btn:hover svg { transform: translateX(3px); }
 
@@ -537,7 +543,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   text-align: left;
   position: relative;
   z-index: 2;
-  width: 75%;
+  width: 90%;
 }
 
 .hero__badge {
@@ -576,7 +582,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   display: flex;
   flex-direction: column;
   font-family: 'Rubik Mono One', monospace;
-  font-size: clamp(2.5rem, 9vw, 6rem);
+  font-size: clamp(1.4rem, 6.8vw, 6.5rem);
   font-weight: 400;
   line-height: 1.1;
   letter-spacing: 0.01em;
@@ -604,6 +610,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   display: block;
   font-family: 'Bungee Outline', cursive;
   color: #000000;
+  white-space: nowrap;
 }
 
 /* Inline layer — Bungee Inline in white, stacked exactly on top */
