@@ -161,33 +161,7 @@ const qsa = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
   sections.forEach(s => sectionObserver.observe(s));
 })();
 
-/* ── 7. PROJECT CARD — parallel hover elevation ──────────── */
-(function initCardTilt() {
-  // Subtle mouse-follow shadow shift on project cards
-  const cards = qsa('.project-card');
-
-  cards.forEach(card => {
-    card.addEventListener('mousemove', (e) => {
-      const rect = card.getBoundingClientRect();
-      const x = (e.clientX - rect.left) / rect.width  - 0.5; // -0.5 to 0.5
-      const y = (e.clientY - rect.top)  / rect.height - 0.5;
-
-      const rotateX = y * -4; // degrees
-      const rotateY = x *  4;
-
-      card.style.transform = `
-        translateY(-6px)
-        perspective(800px)
-        rotateX(${rotateX}deg)
-        rotateY(${rotateY}deg)
-      `;
-    });
-
-    card.addEventListener('mouseleave', () => {
-      card.style.transform = '';
-    });
-  });
-})();
+/* ── 7. PROJECT CARD — tilt removed; hover handled by CSS ── */
 
 /* ── 8. STAT COUNTER ANIMATION ───────────────────────────── */
 (function initCounters() {
@@ -390,4 +364,145 @@ const qsa = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
   // Apply tag from URL on initial load (e.g. arriving from index.html)
   const initial = new URLSearchParams(window.location.search).get('tag') || 'all';
   setFilter(initial);
+})();
+
+/* ── Halftone macaw dot-art ─────────────────────────────── */
+(function initMacawHalftone() {
+  const canvas = document.getElementById('macawCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  const GRID        = 4;
+  const MAX_R       = 1.8;
+  const MIN_R       = 0.3;
+  const THRESHOLD   = 235;
+  const DOT_COLOR   = '#05A7FF';
+  const ACCENT_COLOR = '#000000';   // highlight circle colour
+  const CIRCLE_R    = 80;           // radius of highlight circle (canvas px)
+
+  const CROP = { top: 0.22, bottom: 0.10, left: 0.06, right: 0.06 };
+
+  const img = new Image();
+  img.src = 'images/macaw-hero.jpg';
+
+  let dots = [];          // { x, y, r }
+  let highlight = null;   // canvas-space { x, y } of cursor, null = no highlight
+  let rafId = null;
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    for (const d of dots) {
+      const inCircle = highlight !== null &&
+        (d.x - highlight.x) ** 2 + (d.y - highlight.y) ** 2 <= CIRCLE_R ** 2;
+      ctx.fillStyle = inCircle ? ACCENT_COLOR : DOT_COLOR;
+      ctx.beginPath();
+      ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    rafId = null;
+  }
+
+  function scheduleRedraw() {
+    if (!rafId) rafId = requestAnimationFrame(draw);
+  }
+
+  img.onload = function () {
+    const W = img.naturalWidth, H = img.naturalHeight;
+    const sx = Math.round(W * CROP.left);
+    const sy = Math.round(H * CROP.top);
+    const sw = Math.round(W * (1 - CROP.left - CROP.right));
+    const sh = Math.round(H * (1 - CROP.top  - CROP.bottom));
+
+    const maxW = 2000;
+    canvas.width  = maxW;
+    canvas.height = Math.round(maxW * sh / sw);
+
+    const buf = document.createElement('canvas');
+    buf.width  = canvas.width;
+    buf.height = canvas.height;
+    const bctx = buf.getContext('2d');
+    bctx.drawImage(img, sx, sy, sw, sh, 0, 0, buf.width, buf.height);
+
+    const { data } = bctx.getImageData(0, 0, buf.width, buf.height);
+
+    // Build dot list
+    for (let y = 0; y < canvas.height; y += GRID) {
+      for (let x = 0; x < canvas.width; x += GRID) {
+        const i = (y * canvas.width + x) * 4;
+        const brightness = (data[i] + data[i + 1] + data[i + 2]) / 3;
+        if (brightness < 12 || brightness > THRESHOLD) continue;
+        const t = 1 - brightness / 255;
+        dots.push({ x, y, r: MIN_R + t * (MAX_R - MIN_R) });
+      }
+    }
+
+    draw(); // initial render
+
+    // Mouse tracking — convert page coords to canvas coords
+    const hero = document.querySelector('.hero');
+    hero.addEventListener('mousemove', e => {
+      const rect = canvas.getBoundingClientRect();
+      const scaleX = canvas.width  / rect.width;
+      const scaleY = canvas.height / rect.height;
+      highlight = {
+        x: (e.clientX - rect.left) * scaleX,
+        y: (e.clientY - rect.top)  * scaleY,
+      };
+      scheduleRedraw();
+    });
+
+    hero.addEventListener('mouseleave', () => {
+      highlight = null;
+      scheduleRedraw();
+    });
+  };
+
+  img.onerror = function () {
+    // Image not yet added — canvas stays blank silently
+    console.info('macaw-hero.png not found; add it to /images/ to render dot art.');
+  };
+})();
+
+/* ── Halftone capybara dot-art ───────────────────────────── */
+(function initCapybaraHalftone() {
+  const canvas = document.getElementById('capybaraCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  const GRID      = 4;
+  const MAX_R     = 1.8;
+  const MIN_R     = 0.3;
+  const THRESHOLD = 235;
+  const DOT_COLOR = '#05A7FF';
+
+  const img = new Image();
+  img.src = 'images/capybara-projects.png';
+
+  img.onload = function () {
+    const maxW = 600;
+    canvas.width  = maxW;
+    canvas.height = Math.round(maxW * img.naturalHeight / img.naturalWidth);
+
+    const buf = document.createElement('canvas');
+    buf.width  = canvas.width;
+    buf.height = canvas.height;
+    const bctx = buf.getContext('2d');
+    bctx.drawImage(img, 0, 0, buf.width, buf.height);
+
+    const { data } = bctx.getImageData(0, 0, buf.width, buf.height);
+
+    ctx.fillStyle = DOT_COLOR;
+    for (let y = 0; y < canvas.height; y += GRID) {
+      for (let x = 0; x < canvas.width; x += GRID) {
+        const i = (y * canvas.width + x) * 4;
+        const brightness = (data[i] + data[i + 1] + data[i + 2]) / 3;
+        if (brightness < 12 || brightness > THRESHOLD) continue;
+        const t = 1 - brightness / 255;
+        const r = MIN_R + t * (MAX_R - MIN_R);
+        ctx.beginPath();
+        ctx.arc(x, y, r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+  };
 })();
