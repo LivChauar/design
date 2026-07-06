@@ -613,10 +613,10 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   white-space: nowrap;
 }
 
-/* Inline layer — Bungee Inline in white, stacked exactly on top */
+/* Inline layer — Bungee Inline in blue, stacked exactly on top */
 .hero__title-line__fill {
   font-family: 'Bungee Inline', cursive;
-  color: #ffffff;
+  color: #05A7FF;
   position: absolute;
   top: 0;
   left: 0;
@@ -680,6 +680,7 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
   padding-block: clamp(var(--space-16), 10vw, var(--space-32));
   background: var(--clr-bg);
   overflow: hidden;
+  border-top: 4px solid #000000;
 }
 
 .work__capybara {
