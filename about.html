@@ -35,6 +35,71 @@
       border-radius: inherit;
     }
 
+    /* ── Story Section ── */
+    .story-section {
+      padding-block: clamp(var(--space-16), 10vw, var(--space-32));
+      border-top: 1px solid var(--clr-border);
+    }
+
+    .story-section__quote {
+      margin: var(--space-8) 0 clamp(var(--space-12), 6vw, var(--space-20));
+      padding: 0;
+      border: none;
+    }
+
+    .story-section__quote p {
+      font-family: var(--ff-serif);
+      font-size: clamp(var(--fs-xl), 3.5vw, var(--fs-3xl));
+      font-weight: 400;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      color: var(--clr-text);
+      max-width: 22ch;
+    }
+
+    .story-section__body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(var(--space-10), 6vw, var(--space-20));
+      align-items: start;
+    }
+
+    .story-section__photo {
+      position: sticky;
+      top: calc(var(--nav-h) + var(--space-8));
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      aspect-ratio: 4 / 5;
+    }
+
+    .story-section__photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .story-section__text p {
+      font-size: var(--fs-md);
+      color: var(--clr-text-2);
+      line-height: 1.8;
+      max-width: 58ch;
+    }
+
+    .story-section__text p + p {
+      margin-top: var(--space-6);
+    }
+
+    @media (max-width: 768px) {
+      .story-section__body {
+        grid-template-columns: 1fr;
+      }
+      .story-section__photo {
+        position: static;
+        aspect-ratio: 3 / 2;
+      }
+    }
+
     .cta-section {
       padding-block: clamp(var(--space-16), 10vw, var(--space-32));
       text-align: center;
@@ -149,22 +214,34 @@
     <div class="container">
 
       <!-- Story -->
-      <section class="about-section" aria-labelledby="story-heading">
-        <div class="about-section__grid">
-          <span class="about-section__label reveal-fade">Story</span>
-          <div class="about-section__body reveal-up">
-            <h2 id="story-heading">For the past 8 years</h2>
+      <section class="about-section story-section" aria-labelledby="story-heading">
+        <span class="about-section__label reveal-fade">Story</span>
+
+        <blockquote class="story-section__quote reveal-up">
+          <p id="story-heading">I turn complexity into clarity — and I've been doing it for eight years.</p>
+        </blockquote>
+
+        <div class="story-section__body">
+          <div class="story-section__photo reveal-up" style="--delay: 0.1s">
+            <img src="Working.jpg" alt="Lívia working at her desk" />
+          </div>
+          <div class="story-section__text reveal-up" style="--delay: 0.2s">
             <p>
-              I've detangled complex experiences into smooth flows in a wide variety of markets.
-              From helping a heliport better address their landing process to changing the way
-              gigantic corporation Telefónica handles late payments, my ability to learn about
-              highly complex lines of work is what sets me apart.
+              My career has taken me across industries and continents — from redesigning late-payment
+              flows for Telefónica to rethinking the landing process for a New York heliport. What
+              connects every project is the same challenge: taking something genuinely hard to understand
+              and making it feel effortless.
             </p>
             <p>
-              What I especially enjoy are the stringent problems — those highly ambiguous
-              scenarios that require extra scrutiny from the design end and demand partnership
-              with data, research, and engineers. I particularly love co-design, system mapping,
-              and engaging UI opportunities.
+              At Uber, I've focused on the driver experience — helping millions of people make sense
+              of their earnings, their safety scores, and their insurance coverage. That means working
+              closely with data scientists, engineers, and researchers to get the details right, not
+              just the surface.
+            </p>
+            <p>
+              I'm drawn to the problems that resist easy answers. The ones that need system thinking,
+              careful research, and a willingness to sit with ambiguity before reaching for solutions.
+              Co-design, service mapping, and high-craft UI are where I feel most at home.
             </p>
           </div>
         </div>
