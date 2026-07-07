@@ -323,19 +323,38 @@ button { cursor: pointer; border: none; background: none; font: inherit; }
 .nav__logo-mark {
   display: grid;
   place-items: center;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   background: var(--clr-gold);
   color: #000;
-  border-radius: var(--radius-sm);
-  font-size: var(--fs-xs);
+  border-radius: 4px;
+  font-size: 9px;
   font-weight: 700;
   letter-spacing: 0.05em;
-  transition: transform var(--trans-spring);
+  transform: rotate(45deg) scale(1);
+  transition: transform 0.55s cubic-bezier(0.22, 1.8, 0.36, 1),
+              border-radius 0.45s cubic-bezier(0.22, 1.8, 0.36, 1) 0.05s,
+              background 0.3s ease;
+  will-change: transform, border-radius;
+}
+
+.nav__logo-mark span {
+  display: block;
+  transform: rotate(-45deg) scale(1);
+  transition: transform 0.55s cubic-bezier(0.22, 1.8, 0.36, 1),
+              color 0.3s ease;
+  will-change: transform;
 }
 
 .nav__logo:hover .nav__logo-mark {
-  transform: rotate(-15deg) scale(1.12) skewX(-5deg);
+  transform: rotate(0deg) scale(1.15);
+  border-radius: 50%;
+  background: #05A7FF;
+}
+
+.nav__logo:hover .nav__logo-mark span {
+  transform: rotate(0deg) scale(1);
+  color: #fff;
 }
 
 .nav__logo-name { color: var(--clr-text); }
